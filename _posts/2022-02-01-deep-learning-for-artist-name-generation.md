@@ -1,11 +1,11 @@
 ---
 title: "I built a web app to generate artist/names using Deep Learning"
 date: "2022-02-01"
-categories: 
+categories:
   - "machine-learning"
   - "python3"
   - "text-analysis"
-tags: 
+tags:
   - "deep-learning"
   - "flask"
   - "heroku"
@@ -29,7 +29,9 @@ The basic idea is to train a deep learning model to learn the structure in a pr
 
 I used two different data sources as input to the LSTM model, which I combined to train the model - the first dataset is from the [MusicBrainz](https://musicbrainz.org/) database which consists of over 1.4 Million musical artists. The second dataset is from scraping the Wikipedia page for the [list of club DJ names](https://en.wikipedia.org/wiki/List_of_club_DJs) using [BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/).
 
-\[gist https://gist.github.com/ajey091/20d27a66db56f58979c2d8785772a062\]
+<script src="https://gist.github.com/ajey091/20d27a66db56f58979c2d8785772a062.js"></script>
+
+<!-- \[gist https://gist.github.com/ajey091/20d27a66db56f58979c2d8785772a062\] -->
 
 We also clean up the data we obtain from the MusicBrainz website - specifically, we will only choose names from english-speaking countries and keep only alphabets.
 
@@ -62,7 +64,7 @@ Heroku is a web hosting platform that easily integrates with Flask. The basic id
 ```
 python3 -m venv venv
 source venv/bin/activate
-(venv) > pip install flask gunicorn sng 
+(venv) > pip install flask gunicorn sng
 (venv) > pip freeze > requirements.txt
 (venv) > less requirements.txt
 click==8.0.3
