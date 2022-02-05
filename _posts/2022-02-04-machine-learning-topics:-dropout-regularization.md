@@ -3,7 +3,6 @@ layout: post
 image: /assets/images/Test_image.jpeg
 ---
 
-## Dropout regularization
 
 Dropout regularization is a method to reduce overfitting in a neural network by randomly turning off some nodes. This reduces overfitting since the network learns to not be dependent on the weights of the neurons. The basic idea is that some of the nodes are temporarily prevented from influencing or activating the neuron downstream in a forward pass, and none of the weights updates are applied on the backward pass.
 
