@@ -9,7 +9,9 @@ The central challenge in machine learning is that our trained algorithm must per
 
 L1 and L2 regularization involves adding a penalty term to the cost function
 
-![\Large cost = loss + \frac{\lambda}{2m}||y-\bar{y}||](https://latex.codecogs.com/svg.latex?x%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D)
+![\Large cost=loss+\frac{\lambda}{2m} y-\bar{y}](https://latex.codecogs.com/svg.latex?x%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D)
+
+![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?x%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D)
 
 
 ## Dropout Regularization
