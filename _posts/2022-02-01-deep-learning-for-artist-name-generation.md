@@ -35,7 +35,9 @@ I used two different data sources as input to the LSTM model, which I combined t
 
 We also clean up the data we obtain from the MusicBrainz website - specifically, we will only choose names from english-speaking countries and keep only alphabets.
 
-\[gist https://gist.github.com/ajey091/8d7a62f59256fd9b678c5cafcec0a397\]
+<script src="https://gist.github.com/ajey091/8d7a62f59256fd9b678c5cafcec0a397.js"></script>
+
+<!-- \[gist https://gist.github.com/ajey091/8d7a62f59256fd9b678c5cafcec0a397\] -->
 
 We then append the two sources of data and feed into the model.
 
@@ -43,17 +45,23 @@ We then append the two sources of data and feed into the model.
 
 There are already excellent trained LSTM models for text generation on the internet - there is no point in reinventing the wheel. We will invoke the [startup-name-generator (sng)](https://github.com/AlexEngelhardt/startup-name-generator) model. We will train this model on the dataset that we generated in the previous step. The training takes a few tens of minutes; the time taken for generation of words is proportional to the number of words we request - on my local machine, the trained model took about 3 seconds for every 10 words. This might be a problem when we deploy it to the web server, we will address this issue in the next section.
 
-\[gist https://gist.github.com/ajey091/6f2d1d203d99ab9dc9d6f259bb9509d7\]
+<script src="https://gist.github.com/ajey091/6f2d1d203d99ab9dc9d6f259bb9509d7.js"></script>
+
+<!-- \[gist https://gist.github.com/ajey091/6f2d1d203d99ab9dc9d6f259bb9509d7\] -->
 
 ## Serving with Flask
 
 We will use the pickled model to make generations for a number requested by the user and host it on a local server. We will create a file `app.py`:
 
-\[gist https://gist.github.com/ajey091/84b7695c33a59fbd2bac1414e18f0026\]
+<script src="https://gist.github.com/ajey091/84b7695c33a59fbd2bac1414e18f0026.js"></script>
+
+<!-- \[gist https://gist.github.com/ajey091/84b7695c33a59fbd2bac1414e18f0026\] -->
 
 We will use a simple, standard html template for our endpoint.
 
-\[gist https://gist.github.com/ajey091/cb5794a1458ef48dbf1694ec92acb71d\]
+<script src="https://gist.github.com/ajey091/cb5794a1458ef48dbf1694ec92acb71d.js"></script>
+
+<!-- \[gist https://gist.github.com/ajey091/cb5794a1458ef48dbf1694ec92acb71d\] -->
 
 When we run `app.py`, we will be able to see our artist name generation file at `http://127.0.0.1:5000/`.
 
