@@ -23,7 +23,7 @@ The basic idea is to train a deep learning model to learn the structure in a pr
 2. Train the LSTM model to learn the structure and patterns behind these artist names
 3. Ask the trained model to generate new names
 4. Use `Flask` to serve the model
-5. Host the model on a heroku web server
+5. Host the model on a `Heroku` web server
 
 ## Data collection and cleanup
 
