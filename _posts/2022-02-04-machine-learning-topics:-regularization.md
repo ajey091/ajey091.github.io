@@ -30,6 +30,8 @@ cost = loss + \lambda |\beta|^2
 
 ## Dropout Regularization
 
+A primary reason to use neural networks is to capture more complex relationships between our features than our typical linear models affords us. The neurons at each layer are essentially the weighted sums of all the neurons at the previous layer, with an activation function. While this might seem like a good idea to use _all_ the neurons in the previous layer to determine the output at a given neuron, this leads to neurons learning redundant patterns. Further, important and unique patterns that are learned might not get reinforced strongly enough. All this leads to overfitting. 
+
 Dropout regularization is a method to reduce overfitting in a neural network by randomly turning off some nodes. This reduces overfitting since the network learns to not be dependent on the weights of specific neurons. The basic idea is that some of the nodes are temporarily prevented from influencing or activating the neuron downstream in a forward pass, and none of the weights updates are applied on the backward pass.
 
 So if neurons are randomly dropped out of the network during training, the other neurons step in and make the predictions for the missing neurons. This results in independent internal representations being learned by the network, making the network less sensitive to the specific weight of the neurons. Such a network is better generalized and has fewer chances of producing overfitting.
