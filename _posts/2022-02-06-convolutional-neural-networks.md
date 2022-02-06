@@ -11,5 +11,5 @@ Convolutional neural networks have 3 fundamental features that reduce the number
 
 
 ## Components of CNNs
-## Filers
-Filters act as feature detectors. 
+## Filters
+Filters act as feature detectors.
