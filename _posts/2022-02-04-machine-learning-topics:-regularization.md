@@ -8,7 +8,8 @@ The central challenge in machine learning is that our trained algorithm must per
 This problem of overfitting is common during the practice of machine learning, and a lot of time and attention is focused on addressing the problem of overfitting. The **No Free Lunch Theorem** for machine learning ([Wolpert, 1996][Wolpert-1996]) states that, averaged overall possible data-generating distributions, every classification algorithm has the same error rate when classifying previously unobserved points. In other words, in some sense, no machine learning algorithm is universally any better than any other. The most sophisticated algorithm we can conceive of has the same average performance (over all possible tasks) as merely predicting that every point belongs to the same class. There are a series of techniques used to prevent overfitting called Regularization. Regularization is any modiﬁcation we make to a learning algorithm that is intended to reduce its generalization error but not its training error.
 
 > It is best to think of feedforward networks as function approximation machines that are designed to achieve statistical generalization, occasionally drawing some insights from what we know about the brain, rather than as models of brain function.
-Deep Learning by Ian Goodfellow, Yoshua Bengio, Aaron Courville
+
+> Deep Learning by Ian Goodfellow, Yoshua Bengio, Aaron Courville
 
 
 ## L1 and L2 Regularization
@@ -30,7 +31,7 @@ cost = loss + \lambda |\beta|^2
 
 ## Dropout Regularization
 
-A primary reason to use neural networks is to capture more complex relationships between our features than our typical linear models affords us. The neurons at each layer are essentially the weighted sums of all the neurons at the previous layer, with an activation function. While this might seem like a good idea to use _all_ the neurons in the previous layer to determine the output at a given neuron, this leads to neurons learning redundant patterns. Further, important and unique patterns that are learned might not get reinforced strongly enough. All this leads to overfitting. 
+A primary reason to use neural networks is to capture more complex relationships between our features than our typical linear models affords us. The neurons at each layer are essentially the weighted sums of all the neurons at the previous layer, with an activation function. While this might seem like a good idea to use _all_ the neurons in the previous layer to determine the output at a given neuron, this leads to neurons learning redundant patterns. Further, important and unique patterns that are learned might not get reinforced strongly enough. All this leads to overfitting.
 
 Dropout regularization is a method to reduce overfitting in a neural network by randomly turning off some nodes. This reduces overfitting since the network learns to not be dependent on the weights of specific neurons. The basic idea is that some of the nodes are temporarily prevented from influencing or activating the neuron downstream in a forward pass, and none of the weights updates are applied on the backward pass.
 
