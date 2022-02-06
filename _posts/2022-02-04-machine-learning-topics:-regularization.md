@@ -7,6 +7,10 @@ The central challenge in machine learning is that our trained algorithm must per
 
 This problem of overfitting is common during the practice of machine learning, and a lot of time and attention is focused on addressing the problem of overfitting. The **No Free Lunch Theorem** for machine learning ([Wolpert, 1996][Wolpert-1996]) states that, averaged overall possible data-generating distributions, every classification algorithm has the same error rate when classifying previously unobserved points. In other words, in some sense, no machine learning algorithm is universally any better than any other. The most sophisticated algorithm we can conceive of has the same average performance (over all possible tasks) as merely predicting that every point belongs to the same class. There are a series of techniques used to prevent overfitting called Regularization. Regularization is any modiﬁcation we make to a learning algorithm that is intended to reduce its generalization error but not its training error.
 
+> It is best to think of feedforward networks as function approximation machines that are designed to achieve statistical generalization, occasionally drawing some insights from what we know about the brain, rather than as models of brain function.
+Deep Learning by Ian Goodfellow, Yoshua Bengio, Aaron Courville
+
+
 ## L1 and L2 Regularization
 
 L1 and L2 regularization involves adding a penalty term to the cost function so that the model learns to not overfit to the larger errors. The difference between L1 and L2 regularization methods is that in L1, we add the absolute value of the error term to the cost function; while in L2, we add the square of the error term to the cost function.
