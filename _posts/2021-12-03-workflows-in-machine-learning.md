@@ -20,6 +20,8 @@ It is estimated that the composition of a mature machine learning system might e
 
 https://twitter.com/ginablaber/status/971450218095943681
 
+{{% tweet 971450218095943681 %}}
+
 ## Why MLOps?
 
 There are some important reasons why the operations aspects of the machine learning frameworks are not just relevant to the data engineers and developers, but also acutely pertinent to data scientists. Data drift and concept drift are two such reasons. Once a model is in production, there might be a fundamental change in the new data ingested into the model. Evidently, writing robust unit tests that check for changes in the schema are important, but new data might also prompt a fundamental change in the model that one might want to use. A similar argument applies to concept drift. The goal is to have a pipeline in place to be able to catch such drifts and make changes to the model. Like the saying goes, "a well-trained model is just the beginning". Reproducibility/reusability is another strong motivation for robust MLOps principles and frameworks - ML models are notorious for not being reproducible due to a myriad of reasons (least of which are differences in data, differences in versions of libraries). Unsurprisingly Andrew Ng has lead the academic efforts of MLOps ([here](https://youtu.be/06-AZXmwHjo) is an excellent introduction). Also, Martin Fowler wrote a great [blog post](https://martinfowler.com/articles/cd4ml.html) on the topic of continuous delivery for machine learning.
