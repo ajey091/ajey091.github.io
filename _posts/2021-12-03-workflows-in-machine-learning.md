@@ -28,7 +28,7 @@ There are some important reasons why the operations aspects of the machine learn
 
 The architecture of the machine learning workflow has many components, drawing some parallels to typical DevOps frameworks but with several extra components. I will not attempt to reinvent the wheel here, but instead just borrow the workflow prepared by others:
 
-![Machine Learning Engineering](assets/images/ml-engineering.jpg)
+![Machine Learning Engineering](/assets/images/ml-engineering.jpg)
 
 Typical ML workflow (taken from [\[2\]](https://ml-ops.org/content/end-to-end-ml-workflow))
 
