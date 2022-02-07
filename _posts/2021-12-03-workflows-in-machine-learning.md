@@ -20,7 +20,9 @@ It is estimated that the composition of a mature machine learning system might e
 
 https://twitter.com/ginablaber/status/971450218095943681
 
-{{% tweet 971450218095943681 %}}
+<div class='jekyll-twitter-plugin' align="center">
+    {% twitter https://twitter.com/anaik96 maxwidth=500 limit=5 %}
+</div>
 
 ## Why MLOps?
 
