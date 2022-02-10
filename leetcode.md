@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "PAGE TITLE"
+title: Leetcode
+permalink: /about/
 ---
 
 Hello
