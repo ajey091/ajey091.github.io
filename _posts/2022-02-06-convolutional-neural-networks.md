@@ -14,6 +14,32 @@ Convolutional neural networks have 3 fundamental features that reduce the number
 
 ![Convolutional neural network layers](/assets/images/cnn_banner.png)
 
+A very successful early implementation of a CNN was AlexNet:
 
-### Filters
-Filters act as feature detectors.
+![Alexnet](/assets/images/Alexnet.png)
+
+A simple implementation of a CNN
+
+```
+import keras
+import tensorflow as tf
+
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Flatten
+from keras.layers import conv2D, MaxPooling2D
+
+```
+
+```
+model = Sequential()
+model.add(conv2D(32, kernel_size=(3,3), activation='relu', input_size=(28,28,1)))
+model.add(MaxPooling2D(pool_size=(2,2)))
+model.add(Dropout(0.25))
+model.add(Dense(128, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(num_classes), activation='softmax')
+
+model.compile(loss=keras.losses.categorical_crossentropy, optimizer=tf.keras.optimizers.Adadelta(), metrics=['accuracy'])
+
+
+```
