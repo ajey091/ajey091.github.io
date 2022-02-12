@@ -10,7 +10,7 @@ tags:
 image: /assets/images/ml-engineering.jpg
 ---
 
-## Introduction
+
 
 In the last couple of years, we machine learning practitioners have realized as a community the importance of focusing on not just the development of the algorithm/model itself but also the operations side involved in shipping the model. It is clear in hindsight that some level of integration between the conventionally disconnected, siloed responsibilities of DevOps Engineers, Data Scientists and ML Engineers was inevitable to facilitate better products. The dawn of so-called MLOps (Machine Learning Operations, _à la_ DevOps) is an indication that the practice of data science is no longer treated as the wild west. It did not take us long to realize that developing a well-trained model was just a small fraction of the work, especially in a time with very robust machine learning frameworks (TensorFlow, Pytorch, XGBoost) - for further reading, refer to [\[1\]](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf). [](https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf)
 
