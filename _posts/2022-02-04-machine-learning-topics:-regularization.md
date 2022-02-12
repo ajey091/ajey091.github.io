@@ -75,5 +75,8 @@ In this method, we randomly cut out regions of an image that we are inputting in
 
 This is a rather strange method - involves creating random blends of images from our input dataset, and assigning the target labels as associated probabilities. That is, if we make a blend of 40% cat and 60% dog, the target label would be cat: 0.4 and dog: 0.6.
 
+An excellent overview of regularization can be found [here][michigan-online-ml10].
+
 [Wolpert-1996]: https://direct.mit.edu/neco/article-abstract/8/7/1341/6016/The-Lack-of-A-Priori-Distinctions-Between-Learning
 [SMOTE]: https://arxiv.org/abs/1106.1813
+[michigan-online-ml10]: https://www.youtube.com/watch?v=lGbQlr1Ts7w
