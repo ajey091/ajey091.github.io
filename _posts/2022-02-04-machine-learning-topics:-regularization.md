@@ -5,7 +5,7 @@ image: /assets/images/Test_image.jpeg
 
 The central challenge in machine learning is that our trained algorithm must perform well on new, previously unseen data — not just those on which our model was trained. This ability for the model to perform well on previously unobserved inputs is called generalization. Although machine learning models almost always perform better on the training samples than unseen data, the goal is to maintain a modest discrepancy between training error and generalization error. This essentially suggests that our model has to be sophisticated enough to model the complex relationships between our features and the target, while not overfitting to the training data and hence not generalizing to unseen data.
 
-This problem of overfitting is common during the practice of machine learning, and a lot of time and attention is focused on addressing the problem of overfitting. The **No Free Lunch Theorem** for machine learning ([Wolpert, 1996][Wolpert-1996]) states that, averaged overall possible data-generating distributions, every classification algorithm has the same error rate when classifying previously unobserved points. In other words, in some sense, no machine learning algorithm is universally any better than any other. The most sophisticated algorithm we can conceive of has the same average performance (over all possible tasks) as merely predicting that every point belongs to the same class. There are a series of techniques used to prevent overfitting called Regularization. Regularization is any modiﬁcation we make to a learning algorithm that is intended to reduce its generalization error but not its training error.
+This problem of overfitting is common during the practice of machine learning, and a lot of time and attention is focused on addressing the problem of overfitting. The **No Free Lunch Theorem** for machine learning ([Wolpert, 1996][Wolpert-1996]) states that, averaged overall possible data-generating distributions, every classification algorithm has the same error rate when classifying previously unobserved points. In other words, in some sense, no machine learning algorithm is universally any better than any other. The most sophisticated algorithm we can conceive of has the same average performance (over all possible tasks) as merely predicting that every point belongs to the same class. There are a series of techniques used to prevent overfitting called Regularization. Regularization is any modiﬁcation we make to a learning algorithm that is intended to reduce its generalization error but not its training error. A common pattern in regularization is to add some randomness during training time and to marginalize over randomness during test time.
 
 > It is best to think of feedforward networks as function approximation machines that are designed to achieve statistical generalization, occasionally drawing some insights from what we know about the brain, rather than as models of brain function.
 
@@ -47,8 +47,33 @@ Early stopping is another regularization/cross-validation technique where the le
 
 ## Data Augmentation
 
-Data Augmentation is a regularization technique that is particularly relevant when training a model with images as the input dataset. The idea is that we generate additional images subjecting the images we have to minor transformations such as rotation, flipping, cropping, or blurring a few pixels in the image. This is analogous to Synthetic Minority Oversampling TEchnique (or [SMOTE][SMOTE]) technique which is commonly used in oversampling data when working with imbalanced datasets.  
+Data Augmentation is a regularization technique that is particularly relevant when training a model with images as the input dataset. The idea is that we generate additional images subjecting the images we have to minor transformations such as rotation, flipping, cropping, or blurring a few pixels in the image. This is analogous to Synthetic Minority Oversampling Technique (or [SMOTE][SMOTE]) technique which is commonly used in oversampling data when working with imbalanced datasets.  
 
+
+## Batch normalization
+
+The idea here is to add extra layers into our neural network that essentially perform the operations of standardizing and normalizing the data that is coming in as input to the layer.
+
+
+## Dropconnect regularization
+
+This is similar to dropout regularization but instead of randomly zeroing activations, instead we zero random weights.
+
+## Fractional max pooling
+
+Here, we randomize the sizes of the receptive fields of the pooling regions inside each of the pooling layers of the neural network.
+
+## Dropblock regularization
+
+This is again similar to the dropout and dropconnect regularization techniques that we described above. Here, instead of randomly zeroing out activations or weights, we remove entire blocks of neurons (particularly relevant in a ResNet). Also referred to as stochastic depth.
+
+## Cutout regularization
+
+In this method, we randomly cut out regions of an image that we are inputting into a CNN network.
+
+## Mixup regularization
+
+This is a rather strange method - involves creating random blends of images from our input dataset, and assigning the target labels as associated probabilities. That is, if we make a blend of 40% cat and 60% dog, the target label would be cat: 0.4 and dog: 0.6.
 
 [Wolpert-1996]: https://direct.mit.edu/neco/article-abstract/8/7/1341/6016/The-Lack-of-A-Priori-Distinctions-Between-Learning
 [SMOTE]: https://arxiv.org/abs/1106.1813
