@@ -52,7 +52,7 @@ header_pages:
  - leetcode.md
 
 # Build settings
-theme: minimal
+theme: jekyll-theme-minimal
 
 plugins:
  - jekyll-feed
