@@ -1,9 +1,10 @@
 ---
-#
-# By default, content added below the "---" mark will appear in the home page
-# between the top bar and the list of recent posts.
-# To change the home page layout, edit the _layouts/home.html file.
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-#
 layout: home
 ---
+
+# Welcome to My Website
+
+Hello, I'm Ajey, a Data Scientist with a passion for building intelligent systems. This site is where I share my thoughts and experiences. Thanks for visiting!
+
+[Learn more about me](/about/)
+Check out my [Blog](/blog/) for more updates.

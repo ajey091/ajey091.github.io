@@ -1,11 +1,11 @@
-title: Home
+title: Ajey Venkataraman
 author:
   name: Ajey Venkataraman
   email: ajey091@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
   My name is Ajey Venkataraman and I like to code and teach computers how to do things.
 
-show_excerpts: true # set to true to show excerpts on the homepage
+# show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -16,40 +16,7 @@ minima:
   social_links:
     twitter: ajey091
     github:  ajey091
-    # devto: jekyll
-    # dribbble: jekyll
-    # facebook: jekyll
-    # flickr:   jekyll
-    # instagram: jekyll
     linkedin: ajey-venkataraman
-    # pinterest: jekyll
-    # youtube: jekyll
-    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
-    # youtube_channel_name: CloudCannon
-    # telegram: jekyll
-    # googleplus: +jekyll
-    # microdotblog: jekyll
-    # keybase: jekyll
-
-    # Mastodon instances
-    # mastodon:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
-
-    # GitLab instances
-    # gitlab:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
-
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-header_pages:
- - about.md
- - leetcode.md
 
 # Build settings
 theme: jekyll-theme-minimal
@@ -57,3 +24,11 @@ theme: jekyll-theme-minimal
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Blog
+    url: /blog/
