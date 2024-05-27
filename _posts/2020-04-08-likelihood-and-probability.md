@@ -34,7 +34,7 @@ In the above expression, $latex n$ and $latex p$ are the total number of observa
 
 \[gist https://gist.github.com/ajey091/28d8668e39cfefe3c2b55803d442185a\]
 
-![Likelihood1.png](assets/images/likelihood1.png)
+![Likelihood1.png](/assets/images/likelihood1.png)
 
 We can see from the plot that $latex L$ is maximum at a value close to 0.3. We can differentiate $latex L$ to find its maximum. Or we can just use invoke the `scipy.optimize` function to find the maximum of the likelihood function.
 
@@ -50,7 +50,7 @@ We will repeat the above process to find the value of $latex \\theta$ which maxi
 
 \[gist https://gist.github.com/ajey091/c670f7275484c63135aaec1679850bfe\]
 
-![Likelihood2.png](assets/images/likelihood2.png)
+![Likelihood2.png](/assets/images/likelihood2.png)
 
 `Optimization terminated successfully. Current function value: 59.295332 Iterations: 21 Function evaluations: 42 The likelihood function is maximum at [0.28]`
 
@@ -62,7 +62,7 @@ Now, because the Bernouilli process that we are using is a random process, the o
 
 \[gist https://gist.github.com/ajey091/3b4e9b5e94f6e0c0c94868e184d12255\]
 
-![Likelihood3.png](assets/images/likelihood3.png)
+![Likelihood3.png](/assets/images/likelihood3.png)
 
 We see a nice normal distribution of the $latex \\theta$ values resulting from sampling data a bunch of times.
 
