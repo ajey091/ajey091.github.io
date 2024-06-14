@@ -1,6 +1,6 @@
 ---
 title: "Extractive Summarization"
-date: "2022-06-12"
+date: "2024-06-12"
 categories: 
   - "blog"
   - "NLP"
