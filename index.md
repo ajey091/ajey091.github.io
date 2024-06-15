@@ -3,7 +3,7 @@ layout: home
 title: Welcome to My Website
 ---
 
-I'm Ajey, and I'm obsessed with turning data into something meaningful. I did a bunch of research at grad school at Purdue University and along the way, I discovered my passion for data science. Now, I work at Magnite in Los Angeles, where I use machine learning to optimize online advertising. It's rewarding to create solutions that increase ad revenue while keeping users happy.
+I'm Ajey, and I'm obsessed with turning data into something meaningful. I was doing research for many years in grad school in Computational Sciences at Purdue University and along the way, I discovered my passion for data science. Now, I work at Magnite in Los Angeles, where I use machine learning to optimize online advertising. It's rewarding to create solutions that increase ad revenue while keeping users happy.
 
 When I'm not working on data projects or mentoring aspiring data scientists, I enjoy exploring new ways to apply my skills. From using deep learning to generate creative DJ names to analyzing Formula One races to uncover winning strategies, I'm always looking for interesting challenges.
 
@@ -14,4 +14,5 @@ Outside of work, you can find me staying active at the gym, training for my next
 If you're interested in data science, machine learning, or just want to connect, feel free to reach out. I'm always happy to discuss ideas and share my experiences in this exciting field.
 
 [Learn more about me](https://www.linkedin.com/in/ajey-venkataraman/)
+
 Check out my [Blog](/blog/) for more updates.
