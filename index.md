@@ -13,6 +13,6 @@ Outside of work, you can find me staying active at the gym, training for my next
 
 If you're interested in data science, machine learning, or just want to connect, feel free to reach out. I'm always happy to discuss ideas and share my experiences in this exciting field.
 
-[Learn more about me](https://www.linkedin.com/in/ajey-venkataraman/)
+Learn more about me [here](https://www.linkedin.com/in/ajey-venkataraman/), [here](https://www.magnite.com/blog/day-in-the-life-ajey-venkataraman-data-scientist/) and [here](https://scholar.google.com/citations?user=DGuRTZ4AAAAJ&hl=en&authuser=1)
 
 Check out my [Blog](/blog/) for more updates.

@@ -30,7 +30,7 @@ Let's say we have a sample of data which form the output of a **biased** coin. W
 
 If we define the probability of H as \\( \\theta \\), we have the conditional probability
 
-\\[ L(\\theta|O) = \\theta^{p}\*(1-\\theta)^{n-p} \\]
+\\[ L(\\theta\vert O) = \\theta^{p}\*(1-\\theta)^{n-p} \\]
 
 In the above expression, \\( n \\) and \\( p \\) are the total number of observations and frequency of Heads, respectively. Now, we can evaluate \\( L \\) as a function of \\( \\theta \\) and find the value of \\( \\theta \\) that maximizes \\( L \\).
 
@@ -70,7 +70,7 @@ We see a nice normal distribution of the \\( \\theta \\) values resulting from s
 
 <script src="https://gist.github.com/ajey091/9884c4b08e1fc6376e7611c0c8994fdd.js"></script>
 
-`mean of \\( \\theta \\) = 0.2992 Standard error of \\( \\theta \\) = 0.015 95% Confidence interval of \\( \\theta \\) = [0.21 0.38025]`
+mean of \\( \\theta \\) = 0.2992 Standard error of \\( \\theta \\) = 0.015 95% Confidence interval of \\( \\theta \\) = [0.21 0.38025]
 
 ## Margin of error
 
