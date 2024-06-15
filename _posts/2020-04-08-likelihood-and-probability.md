@@ -18,7 +18,7 @@ Probability is a numerical description of how likely an event is to occur. In pr
 
 \\[ \binom{10}{5} \left(\frac{1}{2}\right)^5 \left(\frac{1}{2}\right)^5 = 0.246 \\]
 
-But, typically, in real world processes, we do not know the probabilities \\( \theta \\) _a priori_. In such cases, we only have access to a sample of data \\( O \\) and we are interested in finding the probabilities. The process of finding the probabilities of the individual processes, given an observation is called Likelihood. Here, we are computing the quantity \\( L(\theta\vertO) \\). Likelihood becomes a very important quantity in statistics where sampling data is the norm.
+But, typically, in real world processes, we do not know the probabilities \\( \theta \\) _a priori_. In such cases, we only have access to a sample of data \\( O \\) and we are interested in finding the probabilities. The process of finding the probabilities of the individual processes, given an observation is called Likelihood. Here, we are computing the quantity \\( L(\theta\vert O) \\). Likelihood becomes a very important quantity in statistics where sampling data is the norm.
 
 When we have sampled a large enough dataset, we can create a likelihood function in terms of the unknown quantity \\( \theta \\). Then, we can invoke the very popular **Maximum Likelihood Estimation** method to compute the value of \\( \theta \\) which (literally) maximizes the likelihood of the given observation. In general, it is more convenient (numerically and computationally) to minimize the \\( log(likelihood) \\) function than the likelihood itself. This works out since log of any function is strictly increasing, and hence the function and its log will have the same maximum values. We will write some code for a simple process and hopefully that should reinforce the above concepts.
 
@@ -30,9 +30,9 @@ Let's say we have a sample of data which form the output of a **biased** coin. W
 
 If we define the probability of H as $latex \\theta$, we have the conditional probability
 
-$latex L(\\theta|O) = \\theta^{p}\*(1-\\theta)^{n-p}$
+$$ L(\\theta|O) = \\theta^{p}\*(1-\\theta)^{n-p} $$
 
-In the above expression, $latex n$ and $latex p$ are the total number of observations and frequency of H, respectively. Now, we can evaluate $latex L$ as a function of $latex \\theta$ and find the value of $latex \\theta$ that maximizes $latex L$.
+In the above expression, \\( n \\) and \\( p \\) are the total number of observations and frequency of Heads, respectively. Now, we can evaluate \\( L \\) as a function of \\( \\theta \\) and find the value of \\( \\theta \\) that maximizes \\( L \\).
 
 <script src="https://gist.github.com/ajey091/28d8668e39cfefe3c2b55803d442185a.js"></script>
 
