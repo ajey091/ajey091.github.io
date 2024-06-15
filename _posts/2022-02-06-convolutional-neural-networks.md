@@ -2,44 +2,56 @@
 layout: post
 image: /assets/images/Test_image.jpeg
 ---
-Convolutional neural networks (CNNs) are a specialized type of neural networks for processing data with a grid-like topology. This essentially means time series data along a discretized grid or more commonly, images (which are RGB or grayscale pixels). CNNs have been practically very useful for image classification tasks. The problem with using conventional artificial neural networks for images is that the number of input dimensions are very high when we are working with high resolution colored images. Furthermore, just considering a flattened array of pixels and feeding into an ANN would make the network very sensitive to the location of the object in the image. CNNs help address these issues. CNNs are essentially neural networks that use convolution in place of general matrix multiplication in at least one of their layers. Hence, the convolution operation preserves the spatial relationships between pixels by learning image features by working on small regions of the whole grid.
+# Understanding Convolutional Neural Networks (CNNs)
 
-Convolutional neural networks have 3 fundamental features that reduce the number of parameters in a neural network -
+Convolutional Neural Networks (CNNs) are a specialized type of neural networks designed for processing data with a grid-like topology. This includes time series data on a discretized grid or more commonly, images, which are represented as RGB or grayscale pixels. CNNs have become extremely useful in image classification tasks due to their ability to handle high-dimensional data efficiently.
 
-1. Sparse interaction between layers
-2.  
+## Problem with Conventional Neural Networks for Image Data
 
+Using traditional artificial neural networks (ANNs) for images can be challenging because high-resolution images lead to a very high number of input dimensions. Additionally, treating image pixels as a flattened array without considering their spatial structure makes the network overly sensitive to the location of objects within the image.
+
+## How CNNs Address These Issues
+
+CNNs maintain the spatial relationships between pixels by using convolution operations instead of general matrix multiplication in at least one of their layers. This approach helps in learning image features more effectively by focusing on small regions of the input grid.
+
+## Fundamental Features of CNNs
+
+Convolutional Neural Networks leverage three key concepts to reduce the number of parameters and computational complexity:
+
+1. **Sparse Interactions (Local Connectivity):** Unlike standard neural networks where each output is connected to every input, CNNs limit connections to local regions. Each neuron is connected only to a small region of the input, making the interaction sparse and the computation more feasible.
+
+2. **Parameter Sharing:** The same weights are used for more than one function in a network. In CNNs, this means that the same filter (weights) used for one patch of an image is reused for all other patches, significantly reducing the number of parameters.
+
+3. **Equivariant Representations:** CNNs ensure that if the input changes, the output changes in the same way. This is crucial for tasks like image recognition, where the orientation and position of an object in the image should not affect the ability to identify the object.
 
 ## Components of CNNs
 
-![Convolutional neural network layers](/assets/images/cnn_banner.png)
+![Convolutional Neural Network layers](/assets/images/cnn_banner.png)
 
-A very successful early implementation of a CNN was AlexNet:
+A prominent early implementation of a CNN was AlexNet, which significantly outperformed other architectures in image classification tasks.
 
-![Alexnet](/assets/images/Alexnet.png)
+![AlexNet](/assets/images/Alexnet.png)
 
-A simple implementation of a CNN
+## Simple Implementation of a CNN
 
-```
+Here's a basic example of implementing a CNN using Keras and TensorFlow:
+
+```python
 import keras
 import tensorflow as tf
-
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
-from keras.layers import conv2D, MaxPooling2D
+from keras.layers import Conv2D, MaxPooling2D
 
-```
-
-```
 model = Sequential()
-model.add(conv2D(32, kernel_size=(3,3), activation='relu', input_size=(28,28,1)))
+model.add(Conv2D(32, kernel_size=(3,3), activation='relu', input_shape=(28,28,1)))
 model.add(MaxPooling2D(pool_size=(2,2)))
 model.add(Dropout(0.25))
+model.add(Flatten())
 model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
-model.add(Dense(num_classes), activation='softmax')
+model.add(Dense(num_classes, activation='softmax'))
 
 model.compile(loss=keras.losses.categorical_crossentropy, optimizer=tf.keras.optimizers.Adadelta(), metrics=['accuracy'])
-
 
 ```
