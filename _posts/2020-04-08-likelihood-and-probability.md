@@ -70,7 +70,9 @@ We see a nice normal distribution of the \\( \\theta \\) values resulting from s
 
 <script src="https://gist.github.com/ajey091/9884c4b08e1fc6376e7611c0c8994fdd.js"></script>
 
-mean of \\( \\theta \\) = 0.2992 Standard error of \\( \\theta \\) = 0.015 95% Confidence interval of \\( \\theta \\) = [0.21 0.38025]
+mean of \\( \\theta \\) = 0.2992 Standard error of \\( \\theta \\) = 0.015 
+
+95% Confidence interval of \\( \\theta \\) = [0.21 0.38025]
 
 ## Margin of error
 
