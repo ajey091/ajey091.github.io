@@ -11,7 +11,7 @@ tags:
   - "word-cloud"
 ---
 
-I am surprised to learn that a [quick fun post](https://ajeyvenkataraman.com/2019/09/07/word-cloud-of-song-lyrics/) in the last year has turned out to be the most popular post of my website. It is my attempt here to provide some code to generalize the approach followed in the previous post. Specifically, in the previous post, I only created a word cloud for song lyrics of a particular song. Here, I am extending that to include any song of user's choice. The extension is fairly straightforward. Following are the adopted steps:
+I am surprised to learn that a [quick fun post](https://ajey091.github.io/data-science/python3/web-api/2019/09/07/word-cloud-of-song-lyrics.html) in the last year has turned out to be the most popular post of my website. It is my attempt here to provide some code to generalize the approach followed in the previous post. Specifically, in the previous post, I only created a word cloud for song lyrics of a particular song. Here, I am extending that to include any song of user's choice. The extension is fairly straightforward. Following are the adopted steps:
 
 - Make a call to a web API to a song lyrics website - here, we choose a free website called [Canarado Lyrics.](https://rapidapi.com/canarado/api/canarado-lyrics)
 - We parse the input song and artist names, and obtain the lyrics.

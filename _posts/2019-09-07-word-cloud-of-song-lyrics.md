@@ -11,7 +11,7 @@ tags:
 coverImage: "aboveandbeyond_16.01.13_nyc_f1-3m-e1567869347881.jpg"
 ---
 
-_Update: I recently made a [post](https://ajeyvenkataraman.com/2020/06/01/word-cloud-of-song-lyrics-revisited/) with a more generic version of the code in this post with the intention of more robustness and flexibility._ 
+_Update: I recently made a [post](https://ajey091.github.io/python3/web-api/2020/06/01/word-cloud-of-song-lyrics-revisited.html) with a more generic version of the code in this post with the intention of more robustness and flexibility._ 
 
 Something that really gets me going is music, and more recently electronic music. One of my favorite artists of all time is Above & Beyond. Their music moves me deep down inside. They always seem to have the right lyrics for any and every occasion. There's something profoundly fitting about their music and words.
 
