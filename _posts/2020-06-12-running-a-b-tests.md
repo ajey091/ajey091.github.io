@@ -49,12 +49,10 @@ For our problem above, we will assume that the goal is an increase in revenue.
 
 The above gives the following output:
         
-        ```
-        Sample Size: 1571
+  > Sample Size: 1571
+
         
-        ```
-        
-        Going back to our streaming service example above, let's assume that the baseline conversion rate was 5% - which means that 5% of the users of the free app converted to the subscription service. Now, our intention is to increase this to 6%. We will keep the default values of \\(\\alpha \\) and \\(\\beta \\) as above. The resulting sample size is 7663 per group. This means that we have to randomly assign 7663 users to see the discount and compare their conversion rate with that of the baseline user (without the discount).
+Going back to our streaming service example above, let's assume that the baseline conversion rate was 5% - which means that 5% of the users of the free app converted to the subscription service. Now, our intention is to increase this to 6%. We will keep the default values of \\(\\alpha \\) and \\(\\beta \\) as above. The resulting sample size is 7663 per group. This means that we have to randomly assign 7663 users to see the discount and compare their conversion rate with that of the baseline user (without the discount).
         
 5. **Run the experiment -** Once we have figured out the number of samples required in the experiment and controlled groups, we have to run the experiment. It is obviously important to ensure that the two groups are randomly selected and no bias is introduced. In the above example, for instance, if we roll out all the discounts on a Monday afternoon, our results will be biased. Also, in this step, it is [recommended that one does not peek at the results](https://www.youtube.com/watch?v=AJX4W3MwKzU) before reaching the required sample size, partly because we can trick ourselves into thinking that a considerable effect is present when there is none.
 6. **Calculate the test statistic (aka perform the hypothesis test) -** The choice of our test statistic depends on the type of problem at hand. Following is a useful grid that is a re-creation from Ref \[4\] below. ![ABtest_grid_of_tests](/assets/images/abtest_grid_of_tests.png) A majority of the time, however, we are looking at difference between two samples and hence are interested in using t-test for 2 independent groups of scores. An important point to note here is that by default, Student's t-test assumes that the two population variances are the same. When this assumption breaks down, a modification needs to be made to use the Welch t-test instead.
@@ -74,7 +72,7 @@ There are many nuances that need to be considered which count as best practices 
   
 <figure>
   <img src="/assets/images/abtest_exporation.png" alt="ABtest_exporation">
-  <figcaption>Taken from \[1\]: Sometimes, exploration rather than refinement leads us to our goal.</figcaption>
+  <figcaption>Taken from [1]: Sometimes, exploration rather than refinement leads us to our goal.</figcaption>
 </figure>
 
 
