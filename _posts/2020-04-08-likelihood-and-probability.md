@@ -78,6 +78,6 @@ Margin of error : $latex MOE = z \* \\frac{\\sigma}{\\sqrt{n}}$
 
 where, $latex z$ is the z-statistic for the 95% confidence level, and $latex \\sigma$ is the standard deviation in the sample. Note that $latex MOE \\propto \\frac{1}{\\sqrt{n}}$.
 
-[here](https://gist.github.com/ajey091/51bd13b54228e6e0a58ee74c6dfedd89)
+<script src="https://gist.github.com/ajey091/51bd13b54228e6e0a58ee74c6dfedd89.js"></script>
 
 `Z-score for 95% confidence interval = 1.960 Margin of error=0.009`
