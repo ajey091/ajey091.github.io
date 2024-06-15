@@ -3,11 +3,15 @@ layout: home
 title: Welcome to My Website
 ---
 
-Hey there! I'm Ajey, a data scientist with a flair for transforming complex data into actionable insights and innovations. After diving deep into aerospace engineering during my PhD at Purdue University, I found my true passion in the vast universe of data science. Now, I spend my days at Magnite in Los Angeles, where I tinker with AI to make online advertising smarter and more efficient. It's pretty rewarding, especially when our solutions boost ad revenue without sacrificing user happiness.
+I'm Ajey, and I'm obsessed with turning data into something meaningful. I did a bunch of research at grad school at Purdue University and along the way, I discovered my passion for data science. Now, I work at Magnite in Los Angeles, where I use machine learning to optimize online advertising. It's rewarding to create solutions that increase ad revenue while keeping users happy.
 
-When I'm not optimizing ad placements or mentoring the next generation of data scientists, I'm probably knee-deep in my latest project, like using deep learning to dream up DJ names or analyzing Formula One races to figure out what makes a winner.
+When I'm not working on data projects or mentoring aspiring data scientists, I enjoy exploring new ways to apply my skills. From using deep learning to generate creative DJ names to analyzing Formula One races to uncover winning strategies, I'm always looking for interesting challenges.
 
-I love making complex concepts accessible and exciting, whether I'm collaborating with engineers and product teams or sharing insights on my blog. If you're into data-driven decision-making or just want to hear more about the magic of machine learning, you've come to the right place. Let's explore the data landscape together!
+I believe in making data science accessible and engaging for everyone. Whether I'm collaborating with colleagues or sharing my thoughts on my blog, my goal is to promote data-driven decision-making and highlight the potential of machine learning.
 
-[Learn more about me](/about/)
+Outside of work, you can find me staying active at the gym, training for my next running event, exploring new restaurants and recipes, or enjoying live music. I believe in maintaining a healthy work-life balance and pursuing my passions.
+
+If you're interested in data science, machine learning, or just want to connect, feel free to reach out. I'm always happy to discuss ideas and share my experiences in this exciting field.
+
+[Learn more about me](https://www.linkedin.com/in/ajey-venkataraman/)
 Check out my [Blog](/blog/) for more updates.
