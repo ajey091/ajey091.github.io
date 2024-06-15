@@ -18,13 +18,13 @@ Probability is a numerical description of how likely an event is to occur. In pr
 
 \\[ \binom{10}{5} \left(\frac{1}{2}\right)^5 \left(\frac{1}{2}\right)^5 = 0.246 \\]
 
-But, typically, in real world processes, we do not know the probabilities \( \theta \) _a priori_. In such cases, we only have access to a sample of data \( O \) and we are interested in finding the probabilities. The process of finding the probabilities of the individual processes, given an observation is called Likelihood. Here, we are computing the quantity \( L(\theta|O) \). Likelihood becomes a very important quantity in statistics where sampling data is the norm.
+But, typically, in real world processes, we do not know the probabilities \\( \theta \\) _a priori_. In such cases, we only have access to a sample of data \\( O \\) and we are interested in finding the probabilities. The process of finding the probabilities of the individual processes, given an observation is called Likelihood. Here, we are computing the quantity \\( L(\theta\vertO) \\). Likelihood becomes a very important quantity in statistics where sampling data is the norm.
 
-When we have sampled a large enough dataset, we can create a likelihood function in terms of the unknown quantity $latex \\theta$. Then, we can invoke the very popular **Maximum Likelihood Estimation** method to compute the value of $latex \\theta$ which (literally) maximizes the likelihood of the given observation. In general, it is more convenient (numerically and computationally) to minimize the $latex log(likelihood)$ function than the likelihood itself. This works out since log of any function is strictly increasing, and hence the function and its log will have the same maximum values. We will write some code for a simple process and hopefully that should reinforce the above concepts.
+When we have sampled a large enough dataset, we can create a likelihood function in terms of the unknown quantity \\( \theta \\). Then, we can invoke the very popular **Maximum Likelihood Estimation** method to compute the value of \\( \theta \\) which (literally) maximizes the likelihood of the given observation. In general, it is more convenient (numerically and computationally) to minimize the \\( log(likelihood) \\) function than the likelihood itself. This works out since log of any function is strictly increasing, and hence the function and its log will have the same maximum values. We will write some code for a simple process and hopefully that should reinforce the above concepts.
 
 Let's say we have a sample of data which form the output of a **biased** coin. We will create a Bernoulli process to produce the outputs of the said biased coin, sample some data from the process and find the probability of H/T.
 
-\[gist https://gist.github.com/ajey091/2f7a3afc39948d2b2261c5939506f782\]
+<script src="https://gist.github.com/ajey091/2f7a3afc39948d2b2261c5939506f782.js"></script>
 
 `[0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 1 0 0 1 0 0 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0]`
 
@@ -34,13 +34,13 @@ $latex L(\\theta|O) = \\theta^{p}\*(1-\\theta)^{n-p}$
 
 In the above expression, $latex n$ and $latex p$ are the total number of observations and frequency of H, respectively. Now, we can evaluate $latex L$ as a function of $latex \\theta$ and find the value of $latex \\theta$ that maximizes $latex L$.
 
-\[gist https://gist.github.com/ajey091/28d8668e39cfefe3c2b55803d442185a\]
+<script src="https://gist.github.com/ajey091/28d8668e39cfefe3c2b55803d442185a.js"></script>
 
 ![Likelihood1.png](/assets/images/likelihood1.png)
 
 We can see from the plot that $latex L$ is maximum at a value close to 0.3. We can differentiate $latex L$ to find its maximum. Or we can just use invoke the `scipy.optimize` function to find the maximum of the likelihood function.
 
-\[gist https://gist.github.com/ajey091/678470772865758c09fb2ba1c8dcbb15\]
+<script src="https://gist.github.com/ajey091/678470772865758c09fb2ba1c8dcbb15.js"></script>
 
 `Optimization terminated successfully. Current function value: -0.000000 Iterations: 21 Function evaluations: 42 The likelihood function is maximum at [0.28]`
 
@@ -50,7 +50,7 @@ $latex log(L) = p\*log(\\theta) + (n-p)\*log(1-\\theta)$
 
 We will repeat the above process to find the value of $latex \\theta$ which maximizes $latex log(L)$.
 
-\[gist https://gist.github.com/ajey091/c670f7275484c63135aaec1679850bfe\]
+<script src="https://gist.github.com/ajey091/c670f7275484c63135aaec1679850bfe.js"></script>
 
 ![Likelihood2.png](/assets/images/likelihood2.png)
 
@@ -62,13 +62,13 @@ As expected, we find the maximum value at the same value of $latex \\theta$.
 
 Now, because the Bernouilli process that we are using is a random process, the outcomes are different each time. To overcome the possible errors due to randomness, we will sample n values a large number of times (1000). Then using the concept of Central Limit Theorem, we will compute the mean, standard deviation, confidence interval and margin of error in the distribution of $latex \\theta$.
 
-\[gist https://gist.github.com/ajey091/3b4e9b5e94f6e0c0c94868e184d12255\]
+<script src="https://gist.github.com/ajey091/3b4e9b5e94f6e0c0c94868e184d12255.js"></script>
 
 ![Likelihood3.png](/assets/images/likelihood3.png)
 
 We see a nice normal distribution of the $latex \\theta$ values resulting from sampling data a bunch of times.
 
-\[gist https://gist.github.com/ajey091/9884c4b08e1fc6376e7611c0c8994fdd\]
+<script src="https://gist.github.com/ajey091/9884c4b08e1fc6376e7611c0c8994fdd.js"></script>
 
 `mean of $latex \theta$ = 0.2992 Standard error of $latex \theta$ = 0.015 95% Confidence interval of $latex \theta$ = [0.21 0.38025]`
 
