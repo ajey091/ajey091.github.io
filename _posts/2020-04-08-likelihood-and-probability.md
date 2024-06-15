@@ -14,7 +14,9 @@ tags:
 
 The difference between the concepts of Likelihood and Probability tends to subtle, at least as a beginner. As always the goal here is to provide some clarification from a mathematical, intuitive standpoint and then write some code in Python to get our feet wet.
 
-For completeness, probability is a numerical description of the chance of an event occurring (or not occurring). In probability theory, the probability of an event is usually denoted by the symbol \( \theta \). If we denote the observed outcomes by \( O \), then, we are interested in finding the quantity \( P(O|\theta) \). In other words, we are interested in computing the probability of the observation, given the initial probabilities of the individual events. Let's say we flip a **fair** coin 10 times. Then, the probability of \( O \) being 5 H and 5 T is \( \binom{10}{5} \left(\frac{1}{2}\right)^5 \left(\frac{1}{2}\right)^5 = 0.246 \).
+Probability is a numerical description of how likely an event is to occur. In probability theory, the probability of an event is usually denoted by the symbol \( \theta \). If we denote the observed outcomes by \( O \), then we are interested in finding the quantity \( P(O|\theta) \). This is the probability of the observation given the initial probabilities of the individual events. For example, if we flip a **fair** coin 10 times, the probability of \( O \) being 5 heads and 5 tails is calculated as follows:
+
+\[ \binom{10}{5} \left(\frac{1}{2}\right)^5 \left(\frac{1}{2}\right)^5 = 0.246 \]
 
 But, typically, in real world processes, we do not know the probabilities \( \theta \) _a priori_. In such cases, we only have access to a sample of data \( O \) and we are interested in finding the probabilities. The process of finding the probabilities of the individual processes, given an observation is called Likelihood. Here, we are computing the quantity \( L(\theta|O) \). Likelihood becomes a very important quantity in statistics where sampling data is the norm.
 
