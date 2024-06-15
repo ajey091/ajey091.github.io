@@ -31,8 +31,6 @@ In the business world, A/B testing is the culmination of statistics, hypothesis 
   <figcaption>Suggested conversion metrics for different site type.</figcaption>
 </figure>
 
-<!-- ![ABtest_metrics](/assets/images/abtest_metrics.png) Taken from \[1\]: Suggested conversion metrics for different site type.\[/caption\] -->
-
 For our problem above, we will assume that the goal is an increase in revenue.
 
 2. **Construct a hypothesis** - Identify areas for potential improvement of the platform or service. In our example above, our hypothesis is that providing a discount to some of the users of the streaming platform increases subscriptions. More formally: \\( H\_0 \\) = no increase in subscriptions after discount \\( H\_a \\) = some (predetermined value) increase in subscriptions after discount
@@ -45,7 +43,11 @@ For our problem above, we will assume that the goal is an increase in revenue.
     - The significance level (\\( \\alpha \\)) - by definition, \\( \\alpha \\) is the probability of making a type I error. Or, the probability of false positives. This level is generally taken to be 0.05.
     - Statistical power (\\( 1-\\beta \\)) - \\( \\beta \\) is the probability of making a type II error, that is the probability of false negatives. Statistical power is the complement of \\(\\beta \\) - we usually prefer power to be 80% or higher, although in practice, [power is much lower](https://statmodeling.stat.columbia.edu/2020/05/18/no-average-statistical-power-is-not-as-high-as-you-think-tracing-a-statistical-error-as-it-spreads-through-the-literature/).
     - The effect size - This is analogous to lift described earlier. Higher the intended effect size, lower the required number of samples in the two experimental groups. There are also other means of quantifying effect size - [Cohen's d](https://en.wikiversity.org/wiki/Cohen%27s_d#:~:text=Cohen's%20d%20is%20an%20effect,the%20comparison%20between%20two%20means.) is a standard metric.
-    - The sample size - The sample size required to achieve statistically significant results depend on the above factors mentioned. The general expression for calculating the sample size is as follows \\(Sample size = \\frac{z\_{score}\*\\sigma\*(1-\\sigma)}{MOE^2} \\) Where, MOE is the margin of error. In practice, however, we write some simple code to calculate the sample sizes (or use an [online calculator](https://www.evanmiller.org/ab-testing/sample-size.html)). \<script src="https://gist.github.com/ajey091/0f7eb36596a9682190cd68b3f88671e7\.js"></script> The above gives the following output:
+    - The sample size - The sample size required to achieve statistically significant results depend on the above factors mentioned. The general expression for calculating the sample size is as follows \\(Sample size = \\frac{z\_{score}\*\\sigma\*(1-\\sigma)}{MOE^2} \\) Where, MOE is the margin of error. In practice, however, we write some simple code to calculate the sample sizes (or use an [online calculator](https://www.evanmiller.org/ab-testing/sample-size.html)). 
+
+<script src="https://gist.github.com/ajey091/0f7eb36596a9682190cd68b3f88671e7\.js"></script> 
+
+The above gives the following output:
         
         ```
         Sample Size: 1571
@@ -69,8 +71,13 @@ There are many nuances that need to be considered which count as best practices 
 - **Exploration versus exploitation - aiming for the global optimum:** The goal of an A/B test ideally would be to optimize between exploration and exploitation - the classic [multi-armed bandit problem](https://en.wikipedia.org/wiki/Multi-armed_bandit). Essentially, in the multi-armed bandit problem, we are using the allocated resources to optimize the exploration-exploitation trade-off. In the context of A/B testing, the idea would be to quickly identify the options that are profitable and pool more resources into these variants, thus eliminating the really ineffective choices early on. The above is similar to the recommendation by Dan and Pete -
     
     > The Refinement path might lead you to miss out on the best solution that could have been discovered with the Exploration approach. While refinement can lead to a solution better than what you have today, we recommend exploring multiple alternatives that might not resemble the current site first. We encourage the kind of humility and bravery required to say, You know, the website we have today is far from perfect. Let s try some dramatically new layouts, new designs, and redesigns, figure out which of those work well, and then refine from there.
-    
-    \[caption id="attachment\_457" align="alignnone" width="642"\]![ABtest_exporation](/assets/images/abtest_exporation.png) Taken from \[1\]: Sometimes, exploration rather than refinement leads us to our goal.\[/caption\]
+  
+<figure>
+  <img src="/assets/images/abtest_exporation.png" alt="ABtest_exporation">
+  <figcaption>Taken from \[1\]: Sometimes, exploration rather than refinement leads us to our goal.</figcaption>
+</figure>
+
+
 - **There _is_ such a thing as too many splits:** There are two potential drawbacks to having too many splits and hypotheses to test - firstly, you are effectively reducing the number of samples in each split (which wouldn't be a problem for very large companies) and secondly, there is still the problem of multiple comparisons mentioned above. We have to refer to the popular [Google experiment](https://www.nytimes.com/2009/03/01/business/01marissa.html) of trying 41 shades of blue at this point. Like the adage goes, just because we can do something, it doesn't mean that we should.
 - **Rule of Three:** This is a useful rule when we wish to extend our observations at the sample to the population - let's say we conduct a randomized control trial (to test the effectiveness of a diagnostic test) on 200 subjects and they all turn out to be negative observations; we wish to come up with the confidence interval. In such a scenario, the rule of three states that if a certain event did not occur in a sample with n subjects, the interval \[0 to 3/n\] represents the 95% confidence interval for the rate of occurrences in the population. So, in the above example, we can state that the confidence interval for the effectiveness of the said test in the population is \[0,3/200\] = \[0,1/67\]. The [Wiki article](https://en.wikipedia.org/wiki/Rule_of_three_\(statistics\)) has a quick derivation of the rule.
 - **Good idea to start with an A/A test:** In an A/A test, the experimentation layout is tested with two identical variants. This helps in achieving two goals - firstly, sanity checking to ensure that we do not see an effect and secondly, establishes a baseline variance (ie, empirical variability) for the data. On that second point, for instance, it helps to establish the variation in data over the span of an entire week before we venture into running our A/B test. If we observe a large variability in the A/A test, it's an indication that the A/B might not end up yielding anything of value.
