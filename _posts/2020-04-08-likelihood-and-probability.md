@@ -28,9 +28,9 @@ Let's say we have a sample of data which form the output of a **biased** coin. W
 
 `[0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 1 0 0 1 0 0 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0]`
 
-If we define the probability of H as $latex \\theta$, we have the conditional probability
+If we define the probability of H as \\( \\theta \\), we have the conditional probability
 
-$$ L(\\theta|O) = \\theta^{p}\*(1-\\theta)^{n-p} $$
+\\[ L(\\theta|O) = \\theta^{p}\*(1-\\theta)^{n-p} \\]
 
 In the above expression, \\( n \\) and \\( p \\) are the total number of observations and frequency of Heads, respectively. Now, we can evaluate \\( L \\) as a function of \\( \\theta \\) and find the value of \\( \\theta \\) that maximizes \\( L \\).
 
@@ -38,17 +38,17 @@ In the above expression, \\( n \\) and \\( p \\) are the total number of observa
 
 ![Likelihood1.png](/assets/images/likelihood1.png)
 
-We can see from the plot that $latex L$ is maximum at a value close to 0.3. We can differentiate $latex L$ to find its maximum. Or we can just use invoke the `scipy.optimize` function to find the maximum of the likelihood function.
+We can see from the plot that \\( L \\) is maximum at a value close to 0.3. We can differentiate \\( L \\) to find its maximum. Or we can just use invoke the `scipy.optimize` function to find the maximum of the likelihood function.
 
 <script src="https://gist.github.com/ajey091/678470772865758c09fb2ba1c8dcbb15.js"></script>
 
 `Optimization terminated successfully. Current function value: -0.000000 Iterations: 21 Function evaluations: 42 The likelihood function is maximum at [0.28]`
 
-As I mentioned earlier, it is usually easier to minimize the $latex log(likelihood)$ function since they have the same $latex \\theta$ value at which the maximum occurs.
+As I mentioned earlier, it is usually easier to minimize the \\( log(likelihood) \\) function since they have the same \\( \\theta \\) value at which the maximum occurs.
 
-$latex log(L) = p\*log(\\theta) + (n-p)\*log(1-\\theta)$
+\\[ log(L) = p\*log(\\theta) + (n-p)\*log(1-\\theta) \\]
 
-We will repeat the above process to find the value of $latex \\theta$ which maximizes $latex log(L)$.
+We will repeat the above process to find the value of \\( \\theta \\) which maximizes \\( log(L) \\).
 
 <script src="https://gist.github.com/ajey091/c670f7275484c63135aaec1679850bfe.js"></script>
 
@@ -56,29 +56,29 @@ We will repeat the above process to find the value of $latex \\theta$ which maxi
 
 `Optimization terminated successfully. Current function value: 59.295332 Iterations: 21 Function evaluations: 42 The likelihood function is maximum at [0.28]`
 
-As expected, we find the maximum value at the same value of $latex \\theta$.
+As expected, we find the maximum value at the same value of \\( \\theta \\).
 
 ## Sampling
 
-Now, because the Bernouilli process that we are using is a random process, the outcomes are different each time. To overcome the possible errors due to randomness, we will sample n values a large number of times (1000). Then using the concept of Central Limit Theorem, we will compute the mean, standard deviation, confidence interval and margin of error in the distribution of $latex \\theta$.
+Now, because the Bernouilli process that we are using is a random process, the outcomes are different each time. To overcome the possible errors due to randomness, we will sample n values a large number of times (1000). Then using the concept of Central Limit Theorem, we will compute the mean, standard deviation, confidence interval and margin of error in the distribution of \\( \\theta \\).
 
 <script src="https://gist.github.com/ajey091/3b4e9b5e94f6e0c0c94868e184d12255.js"></script>
 
 ![Likelihood3.png](/assets/images/likelihood3.png)
 
-We see a nice normal distribution of the $latex \\theta$ values resulting from sampling data a bunch of times.
+We see a nice normal distribution of the \\( \\theta \\) values resulting from sampling data a bunch of times.
 
 <script src="https://gist.github.com/ajey091/9884c4b08e1fc6376e7611c0c8994fdd.js"></script>
 
-`mean of $latex \theta$ = 0.2992 Standard error of $latex \theta$ = 0.015 95% Confidence interval of $latex \theta$ = [0.21 0.38025]`
+`mean of \\( \\theta \\) = 0.2992 Standard error of \\( \\theta \\) = 0.015 95% Confidence interval of \\( \\theta \\) = [0.21 0.38025]`
 
 ## Margin of error
 
 While we already covered mean, standard error and confidence intervals in the last post, the concept of margin of error still requires some attention. Margin of error is another statistic that gives a measure of the random sampling error. Evidently, it has an inverse relationship with the sample size, which is rather intuitive.
 
-Margin of error : $latex MOE = z \* \\frac{\\sigma}{\\sqrt{n}}$
+Margin of error : \\( MOE = z \* \\frac{\\sigma}{\\sqrt{n}} \\)
 
-where, $latex z$ is the z-statistic for the 95% confidence level, and $latex \\sigma$ is the standard deviation in the sample. Note that $latex MOE \\propto \\frac{1}{\\sqrt{n}}$.
+where, \\( z \\) is the z-statistic for the 95% confidence level, and \\( \\sigma \\) is the standard deviation in the sample. Note that \\( MOE \\propto \\frac{1}{\\sqrt{n}} \\).
 
 <script src="https://gist.github.com/ajey091/51bd13b54228e6e0a58ee74c6dfedd89.js"></script>
 
