@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Welcome to My Website
+title: Welcome to my website
 ---
 
 I'm Ajey, and I'm obsessed with turning data into something meaningful. I was doing research for many years during my PhD in Computational Sciences at Purdue University and along the way, I discovered my passion for data science. Now, I work at Magnite in Los Angeles, where I use machine learning to optimize online advertising. It's rewarding to create solutions that increase ad revenue while keeping users happy.
