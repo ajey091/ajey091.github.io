@@ -66,6 +66,6 @@ For further exploration into SSP functionalities and programmatic advertising in
 
 **References:**
 - [What is an SSP? Supply-Side Platforms Explained](https://www.adtechexplained.com/what-is-an-ssp-supply-side-platform/)
-- [What is a Supply-Side Platform (SSP) and How Does It Work? | Clearcode](https://www.clearcode.cc/blog/what-is-an-ssp/)
+- [What is a Supply-Side Platform (SSP) and How Does It Work? - Clearcode](https://www.clearcode.cc/blog/what-is-an-ssp/)
 - [What is a Supply-Side Platform? How SSPs work explained](https://www.adbutler.com/blog/what-is-a-supply-side-platform-how-ssps-work-explained/)
-- [What is a Supply-Side Platform? | Publift](https://www.publift.com/blog/what-is-a-supply-side-platform)
+- [What is a Supply-Side Platform? - Publift](https://www.publift.com/blog/what-is-a-supply-side-platform)
