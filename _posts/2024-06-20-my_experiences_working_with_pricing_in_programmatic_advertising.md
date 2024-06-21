@@ -1,6 +1,6 @@
 ---
 title: " My Experiences Working with Pricing in Programmatic Advertising"
-date: "2022-06-20"
+date: "2024-06-20"
 categories: 
   - "ad-tech"
   - "programmatic advertising"
