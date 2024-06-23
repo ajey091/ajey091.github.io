@@ -15,7 +15,7 @@ As a data scientist focusing on pricing within a Supply-Side Platform (SSP) in t
 
 **The Ecosystem of Programmatic Advertising**
 
-Before diving into the specifics of pricing, it's crucial to understand the ecosystem in which we operate. Programmatic advertising is an automated method of buying and selling ad inventory in real-time. At the heart of this ecosystem are several key players:
+Before diving into the specifics of pricing, it's useful to understand the ecosystem in which we operate. Programmatic advertising is an automated method of buying and selling ad inventory on the internet in real-time. At the heart of this ecosystem are several key players:
 
 1. Publishers: Owners of websites or apps who want to monetize their digital real estate.
 2. Advertisers: Brands or agencies looking to display their ads to specific audiences.
@@ -23,19 +23,19 @@ Before diving into the specifics of pricing, it's crucial to understand the ecos
 4. Demand-Side Platforms (DSPs): Tools used by advertisers to buy ad impressions across multiple ad exchanges.
 5. Ad Exchanges: Virtual marketplaces where ad inventory is bought and sold.
 
-**Decoding the SSP**
+**The SSP**
 
-At its core, an SSP empowers publishers to monetize their digital assets effectively by automating ad sales. By interfacing with a myriad of demand sources, including demand-side platforms (DSPs), ad exchanges, and ad networks, SSPs enhance publishers' ability to maximize revenue through expanded market reach. When a user accesses a publisher’s website, the SSP issues real-time bid requests to various DSPs. It then adjudicates these bids, serving the user the ad associated with the highest bid.
+At its core, an SSP empowers publishers to monetize their digital assets effectively by automating ad sales. By interfacing with a myriad of demand sources, including demand-side platforms (DSPs), ad exchanges, and ad networks, SSPs enhance publishers' ability to maximize revenue through expanded market reach. When a user accesses a publisher’s website, the SSP sends real-time bid requests to various DSPs. It then conducts an auction internally on these bids, serving the user the ad associated with the highest bid.
 
-This automation not only scales the ad selling process but also equips publishers with robust tools for inventory optimization, including robust reporting capabilities, predictive forecasting, and yield management. Through seamless integration with diverse demand sources, SSPs ensure optimal pricing, thereby maximizing publisher revenues.
+This automation not only scales the ad selling process but also equips publishers with robust tools for inventory optimization, including filtering of ad requests, reporting capabilities, predictive forecasting, and yield management. Through seamless integration with diverse demand sources, SSPs ensure optimal pricing, thereby maximizing publisher revenues.
 
 **The Pricing Optimization Challenge**
 
-One of the most critical aspects of our role is setting optimal price floors. A price floor is the minimum price a publisher is willing to accept for their ad inventory. This seemingly simple concept is, in reality, a complex optimization problem with significant implications.
+One of the main aspects of our role as data scientists at an SSP is setting optimal price floors. A price floor is the minimum price a publisher is willing to accept for their ad inventory. Setting price floors presents a fairly complex optimization problem with multiple moving parts and variables with game-theoretic considerasion. 
 
 **Why Price Floors Matter**
 
-Price floors play a pivotal role in the programmatic advertising landscape. They serve as a crucial mechanism to protect publishers from undervaluing their ad inventory and ensure that advertising space is sold at a fair market rate. Here’s why price floors are indispensable:
+Price floors play a pivotal role in the programmatic advertising landscape. They serve as a crucial mechanism to protect publishers from undervaluing their ad inventory and ensure that advertising space is sold at a fair market rate. Here’s why price floors matter:
 
 1. **Revenue Protection:** Price floors prevent advertisers from purchasing premium ad spaces at unreasonably low prices. By setting a minimum price threshold, publishers safeguard their interests, ensuring that their digital assets yield appropriate returns.
 
@@ -58,14 +58,29 @@ Setting price floors is a delicate balancing act:
 
 This balance is further complicated by various factors such as ad format, placement, time of day, user ID, geographical location, and seasonality.
 
+**Benefits for Publishers and Buyers**
+
+**Benefits for Publishers:**
+- **Consistent High Value:** Our approach ensures publishers receive consistently high value for their inventory, even in environments with low bid density (few bids per auction). This is particularly advantageous in a buyer's market.
+- **Revenue Maximization:** By dynamically adjusting floor prices based on real-time market data and historical patterns, we help publishers maximize their revenue potential for each impression.
+- **Protection Against Undervaluation:** Price floors act as a safeguard against selling premium inventory at unfairly low prices, especially in situations where there might be limited competition among bidders.
+- **Improved Negotiation Power:** With data-driven floor prices, publishers have better insights into the true value of their inventory, strengthening their position in direct deals and private marketplace negotiations.
+- **Demand Insights:** The behavior of buyers in response to different floor prices provides valuable insights into demand patterns, helping publishers better understand their audience's value to advertisers.
+
+**Benefits for Buyers:**
+- **Increased Confidence:** Buyers who read and honor floors can have more confidence in their bids, knowing that the floor set by the SSP is a more accurate representation of the clearing price.
+- **Cost Control:** Understanding floor prices helps buyers avoid overbidding on less valuable inventory, allowing for more efficient budget allocation across campaigns.
+- **Inventory Discovery:** Well-set floors can guide buyers towards high-quality inventory they might have otherwise overlooked, expanding their reach to premium audiences.
+- **Reduced Auction Participation Costs:** By having a clearer idea of minimum acceptable bids, buyers can reduce the number of auctions they participate in where they have no realistic chance of winning, saving on computational costs and bid processing fees.
+
 **The Data Science Behind Price Floor Optimization**
 
 Our approach to optimizing price floors involves several key components:
 
-1. Historical Data Analysis: We analyze vast amounts of historical bidding data to understand patterns and trends.
-2. Machine Learning Models: We employ advanced ML models to predict:
-	- The likelihood of an impression being sold at different price points.
-	- The expected bid values from different DSPs for specific inventory.
+1. Historical Data Analysis: We analyze large amounts of historical bidding data to understand patterns and trends.
+2. Machine Learning Models: We employ ML models to predict:
+	- The probability of an impression being sold at different price points - using a classification model.
+	- The expected bid values from different DSPs for specific inventory - using a regression model.
 3. Real-time Adjustment: Our algorithms continuously adjust price floors based on real-time market conditions and bidding behaviors.
 4. A/B Testing: We constantly run experiments with different pricing strategies to identify the most effective approaches.
 5. Feedback Loops: We incorporate the outcomes of our pricing decisions back into our models for continuous improvement.
@@ -74,7 +89,7 @@ Our approach to optimizing price floors involves several key components:
 
 A crucial aspect of our pricing strategy is understanding and predicting the bidding behaviors of different DSPs. This involves:
 
-1. Bid Pattern Analysis: We analyze historical bid data to identify patterns specific to each DSP.
+1. Bidding Behavior Analysis: We analyze historical bid data to identify patterns specific to each DSP.
 2. Segmentation: We segment inventory based on various attributes (e.g., ad size, placement, user demographics) and analyze how different DSPs value each segment.
 3. Time-based Analysis: We look at how bidding behaviors change over time, including daily and seasonal variations.
 4. Competitive Analysis: We study how DSPs react to competitors' bids and our price floors.
@@ -92,21 +107,6 @@ Once we have a good understanding of bidding behaviors, we experiment with diffe
 5. Optimization Loop: Based on the results, we fine-tune our aggressiveness strategies, creating a continuous optimization loop.
 
 The goal of this experimentation is to find the optimal balance that maximizes revenue for publishers without significantly impacting fill rates or long-term advertiser relationships.
-
-**Benefits for Publishers and Buyers**
-
-**Benefits for Publishers:**
-- **Consistent High Value:** Our approach ensures publishers receive consistently high value for their inventory, even in environments with low bid density (few bids per auction). This is particularly advantageous in a buyer's market.
-- **Revenue Maximization:** By dynamically adjusting floor prices based on real-time market data and historical patterns, we help publishers maximize their revenue potential for each impression.
-- **Protection Against Undervaluation:** Price floors act as a safeguard against selling premium inventory at unfairly low prices, especially in situations where there might be limited competition among bidders.
-- **Improved Negotiation Power:** With data-driven floor prices, publishers have better insights into the true value of their inventory, strengthening their position in direct deals and private marketplace negotiations.
-- **Demand Insights:** The behavior of buyers in response to different floor prices provides valuable insights into demand patterns, helping publishers better understand their audience's value to advertisers.
-
-**Benefits for Buyers:**
-- **Increased Confidence:** Buyers who read and honor floors can have more confidence in their bids, knowing that the floor set by the SSP is a more accurate representation of the clearing price.
-- **Cost Control:** Understanding floor prices helps buyers avoid overbidding on less valuable inventory, allowing for more efficient budget allocation across campaigns.
-- **Inventory Discovery:** Well-set floors can guide buyers towards high-quality inventory they might have otherwise overlooked, expanding their reach to premium audiences.
-- **Reduced Auction Participation Costs:** By having a clearer idea of minimum acceptable bids, buyers can reduce the number of auctions they participate in where they have no realistic chance of winning, saving on computational costs and bid processing fees.
 
 **Navigating Challenges in a Dynamic Marketplace**
 
