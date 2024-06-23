@@ -15,6 +15,4 @@ Learn more about me [here](https://www.linkedin.com/in/ajey-venkataraman/), [her
 
 Check out my [Blog](/blog/) for more updates.
 
-Welcome to my website. My name is Ajey Venkataraman, I am a Data Scientist at Magnite. I am based in Los Angeles, CA; I like solving technical and business problems using computers.
-
 [Download My Resume](/assets/Ajey_Venkataraman_2024.pdf)
