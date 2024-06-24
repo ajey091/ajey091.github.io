@@ -3,7 +3,7 @@ layout: home
 title: Welcome to my website
 ---
 
-I'm Ajey, a data scientist passionate about transforming raw information into actionable insights. My journey began during my PhD in Computational Sciences at Purdue University, where years of research ignited my enthusiasm for data science. Now, I work at Magnite in Los Angeles, where I apply statistical and machine learning methods to optimize various parts of programmatic advertising. My work focuses on developing innovative solutions that simultaneously boost ad revenue and enhance user experience.
+I'm Ajey, a data scientist passionate about transforming raw information into actionable insights. My journey began during my PhD in Computational Sciences at Purdue University, where years of research ignited my enthusiasm for data science. Now, I work as a Data Scientist at Magnite, where I apply statistical and machine learning methods to optimize various parts of programmatic advertising. My work focuses on developing innovative solutions that simultaneously boost ad revenue and enhance user experience.
 
 My professional focus is on applying advanced statistical and computational methods to solve challenging technical and business problems. Through collaborative projects with colleagues and thought leadership on my blog, I demonstrate how data science and machine learning can address complex issues across industries. I'm committed to leveraging analytical techniques to drive innovation and deliver tangible results in both technical and business domains.
 
