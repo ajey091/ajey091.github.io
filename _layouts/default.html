@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en" }}">
-<title>{{ page.title | default: site.title }} - Ajey Venkataraman</title>
+<html lang="en">
 
-{%- include head.html -%}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+</head>
 
 <body>
-
-  {%- include header.html -%}
-
-  <main class="page-content" aria-label="Content">
+  <header class="site-header">
     <div class="wrapper">
-      {{ content }}
+      <span class="site-title">{{ site.title | escape }}</span>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <!-- SVG icon code -->
+          </span>
+        </label>
+        <div class="trigger">
+          {%- for item in site.nav -%}
+          <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+          {%- endfor -%}
+        </div>
+      </nav>
     </div>
-  </main>
-
-  {%- include footer.html -%}
-
+  </header>
+  <!-- Your content here -->
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 
 </html>
