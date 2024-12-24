@@ -3,15 +3,15 @@ layout: home
 title: Welcome to my website
 ---
 
-I'm Ajey, a data scientist passionate about transforming raw information into actionable insights. My journey began during my PhD in Computational Sciences at Purdue University, where years of research ignited my enthusiasm for data science. Now, I work as a Data Scientist at Magnite, where I apply statistical and machine learning methods to optimize various parts of programmatic advertising. My work focuses on developing innovative solutions that simultaneously boost ad revenue and enhance user experience.
+I'm Ajey, I'm currently a Lead Data Scientist for Ads at Philo, where I use data to solve business problems. My journey started during my PhD in Computational Sciences at Purdue. Before Philo, I worked as a Senior Data Scientist at Magnite where I developed machine learning solutions to optimize programmatic advertising outcomes.
 
-My professional focus is on applying advanced statistical and computational methods to solve challenging technical and business problems. Through collaborative projects with colleagues and thought leadership on my blog, I demonstrate how data science and machine learning can address complex issues across industries. I'm committed to leveraging analytical techniques to drive innovation and deliver tangible results in both technical and business domains.
+I focus on using statistics and machine learning to tackle technical challenges. Through my blog and work with colleagues, I show how data science can address real business problems across industries. I care about delivering results that matter, whether that's increasing revenue or improving user experience. 
 
-One of the most fulfilling aspects of my work is building and nurturing high-performing teams. I thrive on the energy of collaborative environments and love seeing how diverse perspectives can lead to innovative solutions. There's nothing quite like the synergy that emerges when a group of passionate individuals comes together to tackle complex data challenges.
+Team leadership has become a cornerstone of my professional identity. I find genuine satisfaction in building high-performing teams where diverse perspectives converge to create innovative solutions. The collaborative environment of data science provides constant opportunities to mentor others while learning from their unique approaches to problem-solving.
 
-Outside of work, you can find me staying active at the gym, training for my next running event, exploring new restaurants and recipes, or enjoying live music. I believe in maintaining a healthy work-life balance and pursuing my passions.
+Outside of work, I stay active at the gym and train for running events. You'll also find me trying new restaurants, cooking, or at live music shows. These activities keep me balanced and energized.
 
-If you're interested in data science, machine learning, or just want to connect, feel free to reach out. I'm always happy to discuss ideas and share my experiences in this exciting field.
+If you're interested in data science or machine learning, let's connect. I'm always ready to share ideas and learn from others in this field.
 
 Learn more about me [here](https://www.linkedin.com/in/ajey-venkataraman/), [here](https://www.magnite.com/blog/day-in-the-life-ajey-venkataraman-data-scientist/) and [here](https://scholar.google.com/citations?user=DGuRTZ4AAAAJ&hl=en&authuser=1)
 
