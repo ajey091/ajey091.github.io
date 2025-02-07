@@ -41,7 +41,7 @@ While Tortoise-TTS is capable of producing a wide range of voices and styles, we
 
 We used the preset parameters of Tortoise-TTS to generate the characteristic speech.
 
-![Caregiver Robot Flowchart](/assets/images/cds-flowchart.png)
+<img src="/assets/images/cds-flowchart.png" width="50%" alt="Caregiver Robot Flowchart">
 
 **Evaluation and Results**
 
