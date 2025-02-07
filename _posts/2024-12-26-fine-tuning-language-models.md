@@ -23,13 +23,13 @@ The first step in building our synthetic caregiver was to create a system capabl
 
 LoRA is an efficient method for adapting large language models to specific tasks or domains. Instead of retraining the entire language model (a computationally expensive process), LoRA modifies only a small subset of the model's parameters. This allows us to tailor Gemma's output to the characteristics of CDS while preserving its general language capabilities.
 
-The key to successful fine-tuning is the training data. We used a carefully curated dataset of child-directed speech, primarily derived from the Child Language Data Exchange System (CHILDES) database. CHILDES is a large, publicly available collection of transcribed caregiver-child conversations. We focused on the English portion of CHILDES, selecting a processed subset with clear, well-formed examples of child-directed speech. This provided the vocabulary, sentence structures, and overall style typical of these interactions.
+The key to successful fine-tuning is the training data. We used a carefully curated dataset of child-directed speech, primarily derived from the Child Language Data Exchange System ([CHILDES](https://childes.talkbank.org/)) database. CHILDES is a large, publicly available collection of transcribed caregiver-child conversations. We focused on the English portion of CHILDES, selecting a processed subset with clear, well-formed examples of child-directed speech. This provided the vocabulary, sentence structures, and overall style typical of these interactions.
 
 After preparing the CHILDES data, we used it to train Gemma with LoRA. We essentially showed the model many examples of child-directed speech by giving the LoRA training process the processed CHILDES data, along with the prompt, "Here's an example of child-directed speech." This taught the model the patterns and style of caregiver language. Once the training was complete, we could then prompt the LoRA-trained Gemma model to generate new phrases that a caregiver might say to a child, effectively creating our synthetic caregiver's 'voice'.
 
 **Fine-Tuning Tortoise-TTS for Speech**
 
-Generating appropriate text is only half the battle. To create a truly convincing synthetic caregiver, the next step was to synthesize speech that captured the characteristic prosody of CDS – the "sing-songy" quality, slower speaking rate, and clear enunciation. For this, we used [Tortoise-TTS] (https://github.com/neonbjb/tortoise-tts), a state-of-the-art text-to-speech (TTS) system known for its ability to generate highly expressive and natural-sounding speech.
+Generating appropriate text is only half the battle. To create a truly convincing synthetic caregiver, the next step was to synthesize speech that captured the characteristic prosody of CDS – the "sing-songy" quality, slower speaking rate, and clear enunciation. For this, we used [Tortoise-TTS](https://github.com/neonbjb/tortoise-tts), a state-of-the-art text-to-speech (TTS) system known for its ability to generate highly expressive and natural-sounding speech.
 
 While Tortoise-TTS is capable of producing a wide range of voices and styles, we specifically configured it to emulate CDS. This involved adjusting parameters related to:
 
@@ -49,8 +49,17 @@ For the text, automated metrics (perplexity, BLEU score, type-token ratio) showe
 
 For the speech, automated metrics like Mel-Cepstral Distortion (MCD) indicated good acoustic quality. Crucially, human evaluators rated the synthesized speech as highly intelligible, natural, and possessing the desired CDS characteristics. Below are some example output files generated from the Caregive Robot. 
 
+Caregiver Robot outputs -
 <audio controls>
   <source src="/assets/audio/caregiver_generated_2.wav" type="audio/wav">
+</audio>
+
+<audio controls>
+  <source src="/assets/audio/caregiver_generated_3.wav" type="audio/wav">
+</audio>
+
+<audio controls>
+  <source src="/assets/audio/caregiver_generated_4.wav" type="audio/wav">
 </audio>
 
 **Conclusion and Future Work**
