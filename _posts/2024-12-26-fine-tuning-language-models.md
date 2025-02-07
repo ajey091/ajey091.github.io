@@ -25,7 +25,7 @@ LoRA is an efficient method for adapting large language models to specific tasks
 
 The key to successful fine-tuning is the training data. We used a carefully curated dataset of child-directed speech, primarily derived from the Child Language Data Exchange System ([CHILDES](https://childes.talkbank.org/)) database. CHILDES is a large, publicly available collection of transcribed caregiver-child conversations. We focused on the English portion of CHILDES, selecting a processed subset with clear, well-formed examples of child-directed speech. This provided the vocabulary, sentence structures, and overall style typical of these interactions.
 
-After preparing the CHILDES data, we used it to train Gemma with LoRA. We essentially showed the model many examples of child-directed speech by giving the LoRA training process the processed CHILDES data, along with the prompt, "Here's an example of child-directed speech." This taught the model the patterns and style of caregiver language. Once the training was complete, we could then prompt the LoRA-trained Gemma model to generate new phrases that a caregiver might say to a child, effectively creating our synthetic caregiver's 'voice'.
+After preparing the CHILDES data, we used it to train Gemma with LoRA, through [Unsloth](https://github.com/unslothai/unsloth). We essentially showed the model many examples of child-directed speech by giving the LoRA training process the processed CHILDES data, along with the prompt, "Here's an example of child-directed speech." This taught the model the patterns and style of caregiver language. Once the training was complete, we could then prompt the LoRA-trained Gemma model to generate new phrases that a caregiver might say to a child, effectively creating our synthetic caregiver's 'voice'.
 
 **Fine-Tuning Tortoise-TTS for Speech**
 
@@ -41,7 +41,9 @@ While Tortoise-TTS is capable of producing a wide range of voices and styles, we
 
 We used the preset parameters of Tortoise-TTS to generate the characteristic speech.
 
-<img src="/assets/images/cds-flowchart.png" width="50%" alt="Caregiver Robot Flowchart">
+<div align="center">
+  <img src="/assets/images/cds-flowchart.png" width="50%" alt="Caregiver Robot Flowchart">
+</div>
 
 **Evaluation and Results**
 
