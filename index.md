@@ -17,4 +17,4 @@ Learn more about me [here](https://www.linkedin.com/in/ajey-venkataraman/), [her
 
 Check out my [Blog](/blog/) for more updates.
 
-[Download My Resume](/assets/Ajey_Venkataraman_2024.pdf)
+[Download My Resume](/assets/Ajey_Venkataraman_2025.pdf)
