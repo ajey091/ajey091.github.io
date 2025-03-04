@@ -74,5 +74,5 @@ By precisely manipulating the linguistic and acoustic features of the generated 
 
 
 <div align="center">
-  <img src="/assets/images/cds-flowchart-2.png" width="50%" alt="Caregiver Robot Flowchart">
+  <img src="/assets/images/cds-flowchart-2.png" width="100%" alt="Caregiver Robot Flowchart">
 </div>
