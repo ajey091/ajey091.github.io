@@ -16,3 +16,19 @@ If you're interested in data science or machine learning, let's connect. I'm alw
 Learn more about me - [my LinkedIn](https://www.linkedin.com/in/ajey-venkataraman/), [my Google Scholar profile](https://scholar.google.com/citations?user=DGuRTZ4AAAAJ&hl=en&authuser=1)
 and [a blog post about me](https://www.magnite.com/blog/day-in-the-life-ajey-venkataraman-data-scientist/) and 
 Check out my [Blog](/blog/) for more updates.
+
+## Recent Blog Posts
+
+<div class="recent-posts">
+  {% for post in site.posts limit:5 %}
+    <div class="post-preview">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+      {% if post.description %}
+        <p class="post-description">{{ post.description }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+<a href="/blog/" class="view-all-posts">View all posts →</a>
