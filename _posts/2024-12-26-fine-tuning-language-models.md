@@ -1,6 +1,5 @@
 ---
 title: "Building a Synthetic Caregiver: Fine-Tuning Language and Speech Models for Child Language Acquisition"
-description: "Building a caregiver robot"
 date: "2024-12-26"
 categories: 
   - "blog"
