@@ -19,16 +19,13 @@ Check out my [Blog](/blog/) for more updates.
 
 ## Recent Blog Posts
 
-<div class="recent-posts">
+<ul class="recent-posts">
   {% for post in site.posts limit:5 %}
-    <div class="post-preview">
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <!-- <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p> -->
-      <!-- {% if post.description %}
-        <p class="post-description">{{ post.description }}</p>
-      {% endif %} -->
-    </div>
+    <li class="post-preview">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+    </li>
   {% endfor %}
-</div>
+</ul>
 
 <a href="/blog/" class="view-all-posts">View all posts →</a>
