@@ -88,8 +88,6 @@ This is definitely a work in progress, and there's plenty of room for improvemen
 
 ## Try It Yourself!
 
-Want to see how snarky you (or your friends) are? Check out the Snark Detector at [link to your project]. Just remember - high snark scores aren't necessarily a bad thing. Sometimes, a little snark is exactly what the situation calls for! 😉
-
 You can find the complete code on [GitHub](https://github.com/ajey091/snark-detector).
 
 *Note: This project requires API keys for OpenAI and AssemblyAI. Make sure to set up your environment variables accordingly.* 
