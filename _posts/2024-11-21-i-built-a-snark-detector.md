@@ -88,6 +88,7 @@ def analyze_communication(audio_file_path):
 # Example usage:
 # results = analyze_communication("path/to/your/audio.wav")
 # print(f"Snark Score: {results['snark_score']}") 
+```
 
 ## Initial Findings and Observations
 
