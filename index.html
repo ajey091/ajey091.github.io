@@ -6,127 +6,171 @@
     <title>Meg Cychosz</title>
     <meta name="description" content="Personal website of Meg Cychosz, Assistant Professor at Stanford specializing in speech science and speech development.">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Bootstrap CSS only -->
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Custom styles -->
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 20px;
+        }
+        
+        .site-header {
+            margin-bottom: 30px;
+        }
+        
+        .site-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        
+        .site-subtitle {
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .site-institution {
+            margin-bottom: 20px;
+        }
+        
+        .navbar {
+            margin-bottom: 30px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        .navbar-nav .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 10px 15px;
+        }
+        
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link:focus {
+            color: #0275d8;
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: #0275d8;
+            font-weight: 600;
+        }
+        
+        h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+        
+        a:hover, a:focus {
+            color: #014c8c;
+            text-decoration: underline;
+        }
+        
+        .social-links {
+            margin-top: 40px;
+        }
+        
+        .social-links a {
+            margin-right: 15px;
+        }
+        
+        .research-list {
+            margin-left: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .site-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="site-wrap">
-    <div id="offcanvas_menu" class="offcanvas_menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-        </ul>
-        <p>Created by Meg Cychosz</p>
-        <p><a href="https://colorlib.com" target="_blank">Colorlib</a> ©</p>
-    </div>
+    <div class="container">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="site-title">Meg Cychosz</h1>
+                    <p class="site-subtitle">[ˈmɛg̚.ˈsi.kɑʃ]</p>
+                    <p class="site-institution">
+                        Assistant Professor<br>
+                        Stanford University
+                    </p>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>I am an assistant professor in the <a href="https://linguistics.stanford.edu">Department of Linguistics</a> at Stanford where I direct the <a href="https://spog.ucla.edu">Speech and Cognitive Development Team</a>. For the most detailed and up-to-date information about my research program, please explore our <a href="https://spog.ucla.edu">lab website</a>.</p>
 
-        <main role="main">
-            <h1 id="meg-cychosz" class="mb-0">Meg Cychosz</h1>
-            <div class="mb-5">
-                [ˈmɛg̚.ˈsi.kɑʃ]
-                <p>
-                    Assistant Professor<br>
-                    Stanford University
-                </p>
+                    <h3>Research</h3>
+
+                    <p>Most recent CV available <a href="april_2025.pdf" target="_blank">here</a>.</p>
+
+                    <p>My research specialization is in speech science and speech development, especially among children who receive cochlear implants, including:</p>
+                    
+                    <ul class="research-list">
+                        <li>Developmentally. How do children master complex speech patterns during periods of rapid anatomical change?</li>
+                        <li>Cross-linguistically. How is speech variation encoded across different languages?</li>
+                        <li>Experientially. How does sensory experience affect speech patterning?</li>
+                    </ul>
+
+                    <p>To address these questions, I combine classic methods in linguistic phonetics and psycholinguistics such as in-situ fieldwork, articulatory modeling, and acoustic measurement, with newer approaches such as crowdsourcing, eye-tracking, and the analysis of largescale, natualistic speech databases. Most recently I was awarded a <a href="https://ctsi.ucla.edu/education-and-training/junior-faculty-programs/kl2-translational-science-scholars-program">KL2 translational science training award</a> (akin to the K-series at NIH) through UCLA's Clinical and Translational Science Institute. This award allowed me to learn functional near-infrared spectroscopy (fNIRS) and add that neuro-imaging technique to my methodological toolbelt.</p>
+
+                    <p>In my work, I often use children as model systems because they undergo tremendous physiological and cognitive changes within a very short period of time, making them ideal testing grounds for theories of phonetic variation, learning, and change.</p>
+
+                    <h3>Ask me about citizen science!</h3>
+
+                    <p>Learn about our research program for children with cochlear implants, the <a href="https://spog.ucla.edu/about-our-study/">Learning to Listen Project</a>, and explore our <a href="https://spog.ucla.edu/educational-library/">educational library</a>. We frequently partner with local speech-language pathologists, pediatric audiologists, and families of children with hearing loss to create resources that will benefit the community, so please get in touch with me if our research group can provide anything for your clinic or family.</p>
+
+                    <div class="social-links">
+                        <a href="https://github.com/megseekosh">github.</a>
+                        <a href="https://osf.io/profile/">osf.</a>
+                        <a href="https://scholar.google.com/citations?user=fEg96LUAAAAJ&hl=en">google scholar.</a>
+                        <a href="mailto:mcychosz@stanford.edu">e-mail.</a>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
-
- <div id="loader" class="show fullscreen">
-        <img src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY2lyY3VsYXIiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxjaXJjbGUgY2xhc3M9InBhdGgtYmciIGN4PSIyNCIgY3k9IjI0IiByPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2U9IiNlZWVlZWUiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9InBhdGgiIGN4PSIyNCIgY3k9IjI0IiByPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZT0iI2Y0YjIxNCI+PC9jaXJjbGU+PC9zdmc+" class="circular" alt="loader">
-    </div>
-</body>
-
-        </div>
-
-        <p> I am an assistant professor in the <a href="https://linguistics.stanford.edu"> Department of Linguistics </a> at Stanford  where I direct the <a href="https://spog.ucla.edu"> Speech and Cognitive Development Team</a>. For the most detailed and up-to-date information about my research program, please explore our <a href="https://spog.ucla.edu"> lab website</a>. </p>
-
-         <h3>Research</h3>
-
-        <p>Most recent CV available <a> <a href=april_2025.pdf" target="_blank">here</a>.</p>
-
-         <p> My research specialization is in speech science and speech development, especially among children who receive cochlear implants, including:</p>
-        <p> 
-          <ul>
-              <li>Developmentally. How do children master complex speech patterns during periods of rapid anatomical change?</li>
-              <li>Cross-linguistically. How is speech variation encoded across different languages?  </li>
-              <li>Experientially. How does sensory experience affect speech patterning?</li>
-          </ul>
-        </p>
-
-        <p>To address these questions, I combine classic methods in linguistic phonetics and psycholinguistics such as in-situ fieldwork, articulatory modeling, and acoustic measurement, with newer approaches such as crowdsourcing, eye-tracking, and the analysis of largescale, natualistic speech databases. Most recently I was awarded a <a href="https://ctsi.ucla.edu/education-and-training/junior-faculty-programs/kl2-translational-science-scholars-program"> KL2 translational science training award </a> (akin to the K-series at NIH) through UCLA's Clinical and Translational Science Institute. This award allowed me to learn functional near-infrared spectroscopy (fNIRS) and add that neuro-imaging technique to my methodological toolbelt. </p>
-
-        <p>In my work, I often use children as model systems because they undergo tremendous physiological and cognitive changes within a very short period of time, making them ideal testing grounds for theories of phonetic variation, learning, and change. </p>
-
-         <h3>Ask me about citizen science!</h3>
-
-          <p>Learn about our research program for children with cochlear implants, the <a href="https://spog.ucla.edu/about-our-study/"> Learning to Listen Project</a>, and explore our <a  href="https://spog.ucla.edu/educational-library/"> educational library</a>. We frequently partner with local speech-language pathologists, pediatric audiologists, and families of children with hearing loss to create resources that will benefit the community, so please get in touch with me if our research group can provide anything for your clinic or family.  </p>
-
-
-        <p>
-          <a href="https://github.com/megseekosh">github.</a>
-          <a href="https://osf.io/profile/">osf.</a>
-          <a href="https://scholar.google.com/citations?user=fEg96LUAAAAJ&hl=en">google scholar.</a>
-
-
-          <a href="mailto:mcychosz@stanford.edu">e-mail.</a>
-
-
-        <!-- <h2 class="mb-4 mt-5">Services</h2>
-        <div class="row">
-          <div class="col-md-6 col-lg-6 mb-4">
-            <div class="media custom-media  d-block">
-              <div class="icon mr-3"><span class="ion-android-cart"></span></div>
-              <div class="media-body">
-                <h3 class="mt-0"><a href="#">eCommerce Websites</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed obcaecati totam.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-6 mb-4">
-            <div class="media custom-media  d-block">
-              <div class="icon mr-3"><span class="ion-bonfire"></span></div>
-              <div class="media-body">
-                <h3 class="mt-0"><a href="#">Branding Identity </a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed obcaecati, totam.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-6 mb-4">
-            <div class="media custom-media  d-block">
-              <div class="icon mr-3"><span class="ion-videocamera"></span></div>
-              <div class="media-body">
-                <h3 class="mt-0"><a href="#">Video Editing</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed obcaecati totam.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-6 mb-4">
-            <div class="media custom-media  d-block">
-              <div class="icon mr-3"><span class="ion-cube"></span></div>
-              <div class="media-body">
-                <h3 class="mt-0"><a href="#">Web Applications </a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed obcaecati, totam.</p>
-              </div>
-            </div>
-          </div> -->
-        </div>
-        
-      </main>
-    </div>
-
-    <!-- loader -->
     
-
+    <!-- Bootstrap JS Bundle with Popper -->
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/main.js"></script>
-
-  </body>
+</body>
 </html>
