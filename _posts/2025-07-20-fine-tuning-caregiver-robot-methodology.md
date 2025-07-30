@@ -158,52 +158,80 @@ Each age-stratified model undergoes continuous evaluation during training using 
 
 While our primary focus is age-specific performance, we also evaluate cross-age generalization by testing each model on validation data from other age groups. This analysis provides insights into the transferability of learned linguistic patterns across developmental stages.
 
-## Technical Challenges and Solutions
+## Results
 
-### Memory Management
+To evaluate the effectiveness of the outputs of our fine-tuned models, we conducted linguistic analysis comparing the generated utterances against two key reference corpora. First, we compared model outputs to the holdout validation set from the original CHILDES dataset to assess how well the models captured authentic child-directed speech patterns. Second, we compared the generated CDS against adult-directed speech corpora to verify that our models maintained the distinctive characteristics that differentiate child-directed from adult-directed communication.
 
-Training multiple models sequentially requires careful memory management:
+We used several standard linguistic metrics to quantify the models' performance:
 
-```python
-del model
-del trainer
-if torch.cuda.is_available():
-    torch.cuda.empty_cache()
-```
+- **Moving Average TTR**: Provides a stable measure of lexical diversity (ie, the ratio of unique words to total words) across varying text lengths
 
-This cleanup procedure prevents GPU memory accumulation across training runs, ensuring consistent performance throughout the entire training pipeline.
+<div align="center">
+  <img src="/assets/images/moving_average_TTR.jpg" width="100%" alt="Moving Average Type-Token Ratio across all age groups">
+  <p><em>Figure 1: Moving Average Type-Token Ratio across all age groups</em></p>
+</div>
 
-### Data Quality Assurance
+<div style="display: flex; justify-content: space-between; margin-top: 20px;">
+  <div style="flex: 1; margin-right: 10px;">
+    <img src="/assets/images/moving_average_TTR_3_14.jpg" width="100%" alt="Moving Average TTR for ages 3-14 months">
+    <p><em>Figure 2a: Moving Average TTR (3-14 months)</em></p>
+  </div>
+  <div style="flex: 1; margin-right: 10px;">
+    <img src="/assets/images/moving_average_TTR_15_26.jpg" width="100%" alt="Moving Average TTR for ages 15-26 months">
+    <p><em>Figure 2b: Moving Average TTR (15-26 months)</em></p>
+  </div>
+  <div style="flex: 1;">
+    <img src="/assets/images/moving_average_TTR_27_44.jpg" width="100%" alt="Moving Average TTR for ages 27-44 months">
+    <p><em>Figure 2c: Moving Average TTR (27-44 months)</em></p>
+  </div>
+</div>
 
-Our pipeline includes multiple validation steps to ensure data quality:
 
-1. **Empty content filtering**: Removal of utterances with no meaningful content after cleaning
-2. **Minimum data requirements**: Enforcement of minimum sample sizes for reliable model training
-3. **Stratification validation**: Dynamic adjustment of splitting strategies based on data characteristics
+- **Mean Length of Utterance (MLU)**: Quantifies syntactic complexity through average utterance length
 
-## Results and Performance Metrics
+<div align="center">
+  <img src="/assets/images/MLU.jpg" width="100%" alt="Mean Length of Utterance across all age groups">
+  <p><em>Figure 3: Mean Length of Utterance across all age groups</em></p>
+</div>
 
-### Training Convergence
+<div style="display: flex; justify-content: space-between; margin-top: 20px;">
+  <div style="flex: 1; margin-right: 10px;">
+    <img src="/assets/images/MLU_3_14.jpg" width="100%" alt="Mean Length of Utterance for ages 3-14 months">
+    <p><em>Figure 4a: Mean Length of Utterance (3-14 months)</em></p>
+  </div>
+  <div style="flex: 1; margin-right: 10px;">
+    <img src="/assets/images/MLU_15_26.jpg" width="100%" alt="Mean Length of Utterance for ages 15-26 months">
+    <p><em>Figure 4b: Mean Length of Utterance (15-26 months)</em></p>
+  </div>
+  <div style="flex: 1;">
+    <img src="/assets/images/MLU_27_44.jpg" width="100%" alt="Mean Length of Utterance for ages 27-44 months">
+    <p><em>Figure 4c: Mean Length of Utterance (27-44 months)</em></p>
+  </div>
+</div>
 
-All age-stratified models demonstrated stable convergence within the 10,000-step training limit. The linear learning rate schedule with warmup proved effective in preventing early overfitting while ensuring sufficient learning capacity.
 
-### Age-Specific Adaptations
+- **Word Frequency Distributions**: Analyzes the statistical patterns of word usage to ensure realistic vocabulary patterns
 
-Preliminary analysis reveals distinct linguistic patterns across age groups:
+<div align="center">
+  <img src="/assets/images/word_frequency.jpg" width="100%" alt="Word Frequency Distribution across all age groups">
+  <p><em>Figure 5: Word Frequency Distribution across all age groups</em></p>
+</div>
 
-- **Early models** generate shorter, more repetitive utterances with higher prosodic variation markers
-- **Middle models** show increased vocabulary diversity while maintaining simplified grammatical structures
-- **Late models** demonstrate more complex syntax patterns and conditional language use
+<div style="display: flex; justify-content: space-between; margin-top: 20px;">
+  <div style="flex: 1; margin-right: 10px;">
+    <img src="/assets/images/word_frequency_3_14.jpg" width="100%" alt="Word Frequency Distribution for ages 3-14 months">
+    <p><em>Figure 6a: Word Frequency Distribution (3-14 months)</em></p>
+  </div>
+  <div style="flex: 1; margin-right: 10px;">
+    <img src="/assets/images/word_frequency_15_26.jpg" width="100%" alt="Word Frequency Distribution for ages 15-26 months">
+    <p><em>Figure 6b: Word Frequency Distribution (15-26 months)</em></p>
+  </div>
+  <div style="flex: 1;">
+    <img src="/assets/images/word_frequency_27_44.jpg" width="100%" alt="Word Frequency Distribution for ages 27-44 months">
+    <p><em>Figure 6c: Word Frequency Distribution (27-44 months)</em></p>
+  </div>
+</div>
 
-## Future Directions
-
-### Multi-Modal Integration
-
-Future work will integrate these age-stratified language models with corresponding speech synthesis systems, creating a comprehensive age-adaptive caregiver robot capable of both appropriate content generation and prosodic adaptation.
-
-### Longitudinal Validation
-
-We plan to validate our age-stratified approach through longitudinal studies with our Child Learner Robot, measuring language acquisition outcomes across different caregiver model configurations.
 
 ## Conclusion
 
