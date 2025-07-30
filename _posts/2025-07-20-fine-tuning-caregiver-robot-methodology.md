@@ -232,10 +232,15 @@ We used several standard linguistic metrics to quantify the models' performance:
 
 
 ## Conclusion
+The quantitative analysis of our fine-tuned model's output demonstrates strong alignment with real child-directed speech patterns. The moving average Type-Token Ratio (TTR), Mean Length of Utterance (MLU), and word frequency distributions of the generated speech closely match those observed in the CHILDES holdout set across all age groups (3-44 months). Importantly, these metrics differ significantly from adult-directed speech patterns, confirming that our model has successfully learned the distinctive characteristics of child-directed communication.
 
-Our age-stratified fine-tuning methodology represents a significant advancement in creating developmentally appropriate artificial caregivers. By capturing the natural evolution of caregiver speech patterns across child development stages, we enable more precise experimental control in language acquisition research while maintaining ecological validity.
+This empirical validation of our age-stratified fine-tuning methodology represents a significant advancement in creating developmentally appropriate artificial caregivers. The model's ability to replicate the natural evolution of caregiver speech patterns across child development stages enables more precise experimental control in language acquisition research while maintaining ecological validity.
 
-The complete training pipeline demonstrates the feasibility of creating specialized language models for child-directed speech generation, opening new possibilities for controlled studies of early language development and intervention strategies.
+## Future Work
+The next phase of this research will focus on training the child-directed speech (CDS) model to generate the characteristic prosodic patterns of caregiver speech. We will fine-tune a speech synthesis model on carefully selected CDS audio samples from CHILDES, optimizing for features like exaggerated pitch contours, slower speaking rate, and clearer enunciation. The trained speech model will then be integrated with our fine-tuned LLM, creating an end-to-end system that can generate both age-appropriate text and speech that mimics natural caregiver communication patterns.
+
+Stay tuned for upcoming posts detailing the speech model architecture, training methodology, and evaluation results. We will also share audio samples demonstrating the system's ability to produce developmentally-tailored child-directed speech across different age ranges.
+
 
 ---
 
