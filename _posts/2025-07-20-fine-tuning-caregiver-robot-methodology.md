@@ -171,19 +171,19 @@ We used several standard linguistic metrics to quantify the models' performance:
   <p><em>Figure 1: Moving Average Type-Token Ratio across all age groups</em></p>
 </div>
 
-<div style="display: flex; justify-content: space-between; margin-top: 20px;">
-  <div style="flex: 1; margin-right: 10px;">
-    <img src="/assets/images/moving_average_TTR_3_14.jpg" width="100%" alt="Moving Average TTR for ages 3-14 months">
-    <p><em>Figure 2a: Moving Average TTR (3-14 months)</em></p>
-  </div>
-  <div style="flex: 1; margin-right: 10px;">
-    <img src="/assets/images/moving_average_TTR_15_26.jpg" width="100%" alt="Moving Average TTR for ages 15-26 months">
-    <p><em>Figure 2b: Moving Average TTR (15-26 months)</em></p>
-  </div>
-  <div style="flex: 1;">
-    <img src="/assets/images/moving_average_TTR_27_44.jpg" width="100%" alt="Moving Average TTR for ages 27-44 months">
-    <p><em>Figure 2c: Moving Average TTR (27-44 months)</em></p>
-  </div>
+<div align="center">
+  <img src="/assets/images/moving_average_TTR_3_14.jpg" width="100%" alt="Moving Average TTR for ages 3-14 months">
+  <p><em>Figure 2: Moving Average TTR (3-14 months)</em></p>
+</div>
+
+<div align="center">
+  <img src="/assets/images/moving_average_TTR_15_26.jpg" width="100%" alt="Moving Average TTR for ages 15-26 months">
+  <p><em>Figure 3: Moving Average TTR (15-26 months)</em></p>
+</div>
+
+<div align="center">
+  <img src="/assets/images/moving_average_TTR_27_44.jpg" width="100%" alt="Moving Average TTR for ages 27-44 months">
+  <p><em>Figure 4: Moving Average TTR (27-44 months)</em></p>
 </div>
 
 
@@ -193,43 +193,41 @@ We used several standard linguistic metrics to quantify the models' performance:
   <img src="/assets/images/MLU.jpg" width="100%" alt="Mean Length of Utterance across all age groups">
   <p><em>Figure 3: Mean Length of Utterance across all age groups</em></p>
 </div>
-
-<div style="display: flex; justify-content: space-between; margin-top: 20px;">
-  <div style="flex: 1; margin-right: 10px;">
-    <img src="/assets/images/MLU_3_14.jpg" width="100%" alt="Mean Length of Utterance for ages 3-14 months">
-    <p><em>Figure 4a: Mean Length of Utterance (3-14 months)</em></p>
-  </div>
-  <div style="flex: 1; margin-right: 10px;">
-    <img src="/assets/images/MLU_15_26.jpg" width="100%" alt="Mean Length of Utterance for ages 15-26 months">
-    <p><em>Figure 4b: Mean Length of Utterance (15-26 months)</em></p>
-  </div>
-  <div style="flex: 1;">
-    <img src="/assets/images/MLU_27_44.jpg" width="100%" alt="Mean Length of Utterance for ages 27-44 months">
-    <p><em>Figure 4c: Mean Length of Utterance (27-44 months)</em></p>
-  </div>
+<div align="center">
+  <img src="/assets/images/MLU_3_14.jpg" width="100%" alt="Mean Length of Utterance for ages 3-14 months">
+  <p><em>Figure 4a: Mean Length of Utterance (3-14 months)</em></p>
 </div>
 
+<div align="center">
+  <img src="/assets/images/MLU_15_26.jpg" width="100%" alt="Mean Length of Utterance for ages 15-26 months">
+  <p><em>Figure 4b: Mean Length of Utterance (15-26 months)</em></p>
+</div>
+
+<div align="center">
+  <img src="/assets/images/MLU_27_44.jpg" width="100%" alt="Mean Length of Utterance for ages 27-44 months">
+  <p><em>Figure 4c: Mean Length of Utterance (27-44 months)</em></p>
+</div>
 
 - **Word Frequency Distributions**: Analyzes the statistical patterns of word usage to ensure realistic vocabulary patterns
 
 <div align="center">
-  <img src="/assets/images/word_frequency.jpg" width="100%" alt="Word Frequency Distribution across all age groups">
+  <img src="/assets/images/word_frequencies.jpg" width="100%" alt="Word Frequency Distribution across all age groups">
   <p><em>Figure 5: Word Frequency Distribution across all age groups</em></p>
 </div>
 
-<div style="display: flex; justify-content: space-between; margin-top: 20px;">
-  <div style="flex: 1; margin-right: 10px;">
-    <img src="/assets/images/word_frequency_3_14.jpg" width="100%" alt="Word Frequency Distribution for ages 3-14 months">
-    <p><em>Figure 6a: Word Frequency Distribution (3-14 months)</em></p>
-  </div>
-  <div style="flex: 1; margin-right: 10px;">
-    <img src="/assets/images/word_frequency_15_26.jpg" width="100%" alt="Word Frequency Distribution for ages 15-26 months">
-    <p><em>Figure 6b: Word Frequency Distribution (15-26 months)</em></p>
-  </div>
-  <div style="flex: 1;">
-    <img src="/assets/images/word_frequency_27_44.jpg" width="100%" alt="Word Frequency Distribution for ages 27-44 months">
-    <p><em>Figure 6c: Word Frequency Distribution (27-44 months)</em></p>
-  </div>
+<div align="center">
+  <img src="/assets/images/word_frequencies_3_14.jpg" width="100%" alt="Word Frequency Distribution for ages 3-14 months">
+  <p><em>Figure 6a: Word Frequency Distribution (3-14 months)</em></p>
+</div>
+
+<div align="center">
+  <img src="/assets/images/word_frequencies_15_26.jpg" width="100%" alt="Word Frequency Distribution for ages 15-26 months">
+  <p><em>Figure 6b: Word Frequency Distribution (15-26 months)</em></p>
+</div>
+
+<div align="center">
+  <img src="/assets/images/word_frequencies_27_44.jpg" width="100%" alt="Word Frequency Distribution for ages 27-44 months">
+  <p><em>Figure 6c: Word Frequency Distribution (27-44 months)</em></p>
 </div>
 
 
